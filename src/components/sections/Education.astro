@@ -1,0 +1,80 @@
+---
+import Section from '../Section.astro';
+
+import { education } from '@cv';
+---
+
+<Section title="Educación">
+  <ul>
+    {
+      education.map(({ institution, area, studyType, startDate, endDate }) => {
+        return (
+          <li>
+            <article>
+              <header>
+                <div>
+                  <h3>{institution}</h3>
+                  <h4>{area}</h4>
+                </div>
+                <p class="date">
+                  {startDate} - {endDate ? endDate : 'Presente'}
+                </p>
+              </header>
+              <footer>
+                <p>{studyType}</p>
+              </footer>
+            </article>
+          </li>
+        );
+      })
+    }
+  </ul>
+</Section>
+
+<style>
+  article {
+    border: 1px solid var(--color-quinto);
+    border-radius: 4px;
+    padding: 1.2rem;
+    width: 100%;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  h4 {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.8rem;
+    margin: 4px 0;
+    letter-spacing: 0.01rem;
+    color: var(--color-primario);
+  }
+  .date {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    margin: 4px 0 0 0;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+  @media print {
+    * {
+      color: black;
+      background: white;
+    }
+
+    h4 {
+      color: black;
+    }
+
+    a {
+      display: none;
+    }
+  }
+</style>

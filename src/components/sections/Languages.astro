@@ -1,0 +1,45 @@
+---
+import Section from '../Section.astro';
+
+import { languages } from '@cv';
+---
+
+<Section title="Lenguajes">
+  <ul>
+    {
+      languages.map(({ language }) => {
+        return (
+          <>
+            <li>
+              <span>{language}</span>
+            </li>
+          </>
+        );
+      })
+    }
+  </ul>
+</Section>
+
+<style>
+  ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    list-style: none;
+  }
+
+  span {
+    user-select: none;
+    font-size: 0.8rem;
+    color: var(--color-terciario);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-quinto);
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+  span:hover {
+    border: 1px solid #888;
+  }
+</style>
