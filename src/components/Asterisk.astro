@@ -1,0 +1,49 @@
+---
+---
+<img class="asterisk" src="/favicon.svg" alt="">
+<style>
+    .asterisk{
+        position: absolute;
+        top: -16rem;
+        left: -12rem;
+        
+        pointer-events: none;
+
+        width: 44rem;
+        height:44rem;
+        
+        
+        z-index: -1;
+        filter: blur(12px);
+
+        animation: rotate-animation 80s infinite linear;
+	}
+
+@keyframes rotate-animation {
+	0% {
+		transform: rotate(0deg);
+  }
+  50% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@media screen and (max-width: 768px) {
+    .asterisk{
+        width: 24rem;
+        height: 24rem;
+
+        top: -8rem;
+        left: -4rem;
+    };
+}
+@media screen and (max-width: 460px) {
+    .asterisk{
+        
+        display:none
+    }
+}
+</style>

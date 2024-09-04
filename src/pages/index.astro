@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 import Layout from "@/layouts/Layout.astro";
 
 import Hero from "@/components/sections/Hero.astro";
@@ -6,32 +8,27 @@ import About from "@/components/sections/About.astro";
 import Education from "@/components/sections/Education.astro";
 import Projects from "@/components/sections/Projects.astro";
 import Experience from "@/components/sections/Experience.astro";
-import Skills from "@/components/sections/Skills.astro";
+import Technologies from '@/components/sections/Technologies.astro';
 import Languages from "@/components/sections/Languages.astro";
+import Asterisk from '@/components/Asterisk.astro';
+import Footer from '@/components/Footer.astro';
+import NavBar from '@/components/NavBar.astro';
 ---
 
 <Layout title="CV - Ramiro Fiscella">
+  <NavBar />
+
   <main>
+    <Asterisk />
     <Hero />
     <About />
     <Experience />
     <Projects />
     <Education />
-    <Skills />
-    <Languages />
+    <Technologies />
+    <Languages /> 
+
+    <Footer />
   </main>
 </Layout>
 
-<style>
-  main {
-    padding: 4rem;
-    margin: auto;
-    width: 100%;
-  }
-
-  @media (max-width: 450px) {
-    main {
-      padding: 1rem;
-    }
-  }
-</style>

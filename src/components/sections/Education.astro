@@ -10,16 +10,14 @@ import { education } from '@cv';
       education.map(({ institution, area, studyType, startDate, endDate }) => {
         return (
           <li>
-            <article>
+            <article class="education">
               <header>
-                <div>
-                  <h3>{institution}</h3>
-                  <h4>{area}</h4>
-                </div>
+                <h3>{institution}</h3>
                 <p class="date">
                   {startDate} - {endDate ? endDate : 'Presente'}
                 </p>
               </header>
+                  <h4>{area}</h4>
               <footer>
                 <p>{studyType}</p>
               </footer>
@@ -32,16 +30,23 @@ import { education } from '@cv';
 </Section>
 
 <style>
-  article {
-    border: 1px solid var(--color-quinto);
+  .education {
     border-radius: 4px;
     padding: 1.2rem;
     width: 100%;
+    height: max-content;
   }
   ul {
     display: flex;
-    flex-direction: column;
+    
+    flex-direction: row;
     gap: 1rem;
+    height: max-content;
+  }
+  li {
+    width: 100%;
+    
+    height: fit-content;
   }
 
   h4 {
@@ -63,6 +68,13 @@ import { education } from '@cv';
     align-items: center;
     margin-bottom: 4px;
   }
+
+  @media screen and (max-width: 760px) {
+    ul {
+      flex-direction: column;
+    }
+  }
+
   @media print {
     * {
       color: black;

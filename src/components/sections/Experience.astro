@@ -7,11 +7,11 @@ import { work } from '@cv';
 <Section title="Experiencia">
   <ul>
     {
-      work.map(({ name, startDate, endDate, position, summary }) => {
+      work.map(({ name, startDate, endDate, position, summary, url }) => {
         return (
           <>
             <li>
-              <article>
+              <article class="experience-article">
                 <header>
                   <div>
                     <h3>{name}</h3>
@@ -23,6 +23,7 @@ import { work } from '@cv';
                 <h4>{position}</h4>
                 <footer>
                   <p>{summary}</p>
+                  <a class="read-more" href={url} target="_blank">{url ? 'Ver más' : ''}</a>
                 </footer>
               </article>
             </li>
@@ -34,12 +35,12 @@ import { work } from '@cv';
 </Section>
 
 <style>
-  article {
-    border: 1px solid var(--color-quinto);
+  .experience-article {
     border-radius: 4px;
     padding: 1.2rem;
     width: 100%;
   }
+
   ul {
     display: flex;
     flex-direction: column;
@@ -50,21 +51,29 @@ import { work } from '@cv';
     text-transform: uppercase;
     font-weight: 500;
     font-size: 0.8rem;
-    margin: 4px 0;
+
     letter-spacing: 0.01rem;
     color: var(--color-primario);
   }
   .date {
+    font-family: var(--font-secundaria);
+    color: var(--color-terciario);
     text-transform: uppercase;
     font-size: 0.7rem;
-    margin: 4px 0 0 0;
+    font-weight: 500;
   }
-  header {
+  article header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-content: flex-start;
+    align-items: flex-start;
     margin-bottom: 4px;
   }
+
+  footer p {
+    margin: 0 0 8px;
+  }
+  
   @media print {
     h4 {
       color: black;

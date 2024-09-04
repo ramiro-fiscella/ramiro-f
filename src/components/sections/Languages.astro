@@ -4,14 +4,14 @@ import Section from '../Section.astro';
 import { languages } from '@cv';
 ---
 
-<Section title="Lenguajes">
+<Section title="Idiomas">
   <ul>
     {
       languages.map(({ language }) => {
         return (
           <>
             <li>
-              <span>{language}</span>
+              <span class="tag">{language}</span>
             </li>
           </>
         );
@@ -28,18 +28,5 @@ import { languages } from '@cv';
     list-style: none;
   }
 
-  span {
-    user-select: none;
-    font-size: 0.8rem;
-    color: var(--color-terciario);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--color-quinto);
-    padding: 3px 8px;
-    border-radius: 4px;
-  }
-  span:hover {
-    border: 1px solid #888;
-  }
+  
 </style>

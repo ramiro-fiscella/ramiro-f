@@ -1,13 +1,15 @@
 ---
+
 import { basics } from '@cv';
 import Section from '@/components/Section.astro';
 import Mail from '@/icons/Mail.astro';
-import Phone from '@/icons/Phone.astro';
+// import Phone from '@/icons/Phone.astro';
 import WorldMap from '@/icons/WorldMap.astro';
 import LinkedIn from '@/icons/LinkedIn.astro';
 import GitHub from '@/icons/GitHub.astro';
+import ThemeBtn from '../ThemeBtn.astro';
 
-const { name, label, image, location, profiles, phone, email } = basics;
+const { name, label1, label2, image, location, profiles, email } = basics;
 const { city, region } = location;
 
 const SOCIAL_ICONS: Record<string, any> = {
@@ -21,15 +23,20 @@ const LinkedUrl = linkedInfo?.url;
 const githubInfo = profiles.find((p) => p.network === 'GitHub');
 const gitHubUrl = githubInfo?.url;
 
-const printInfo = [phone, email, LinkedUrl, gitHubUrl];
+const printInfo = [email, LinkedUrl, gitHubUrl];
 // const printInfo = [phone, email, LinkedUrl, gitHubUrl, xUrl];
 ---
 
 <Section>
+  <ThemeBtn />
   <div class="container">
     <div class="info">
+      <p>Hello World!</p>
       <h1>{name}</h1>
-      <h2>{label}</h2>
+      <div class="labels">
+        <h2>{label1}</h2>
+        <h2>{label2}</h2>
+      </div>
       <span>
         <WorldMap />
         {city}, {region}
@@ -42,17 +49,18 @@ const printInfo = [phone, email, LinkedUrl, gitHubUrl];
         {
           email && (
             <a
+              class="mail"
               href={`mailto:${email}`}
-              title={`Enviar correo electrónico a ${name} al corre ${email}`}
+              title={`Enviar correo electrónico a ${name} al correo ${email}`}
               target="_blank"
               rel="noopener noreferer"
             >
-              <Mail />
+              CONTÁCTAME
             </a>
           )
         }
 
-        {
+        <!-- {
           phone && (
             <a
               href={`tel:${phone}`}
@@ -63,7 +71,7 @@ const printInfo = [phone, email, LinkedUrl, gitHubUrl];
               <Phone />
             </a>
           )
-        }
+        } -->
 
         {
           profiles.map(({ network, url }) => {
@@ -83,52 +91,79 @@ const printInfo = [phone, email, LinkedUrl, gitHubUrl];
         }
       </footer>
     </div>
-    <!-- <figure>
+    
+    <figure>
       <img src={image} alt={name} />
-    </figure> -->
+    </figure>
   </div>
 </Section>
 
 <style>
   .container {
+    height: 16rem;
+    
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 3rem;
+    text-align: right;
+  }
+
+  .labels h2 {
+    font-size: 2rem;;
+    font-weight: 500;
+    margin: 0;
   }
 
   .info {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    padding-right: 32px;
+    width: 100%;
+    max-width: 320px;
   }
 
   span {
     color: var(--color-terciario);
+    font-size: 0.6rem; 
+    text-transform: uppercase;
+    letter-spacing: 0.01rem;
+    line-height: 1.4;
+    font-weight: 500;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    gap: 0.2rem;
   }
 
   h1 {
-    font-size: 2rem;
-  }
-  h2 {
-    margin-top: 0;
-    font-size: 1.2rem;
-    font-weight: 400;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.08rem;
     color: var(--color-primario);
-    text-wrap: balance;
   }
 
-  /* figure img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: fill;
-    box-shadow: 0 0 150px -10px var(--color-quinto);
-  } */
+  figure {
+    height: 16rem;
+    margin: 0;
+  }
+  
+  figure img {
+    height: 90%;
+    border-radius: 8px;
+    /* border-radius: 16px; */
+    
+    
+    object-fit: cover;
+    border: solid 2px #ff896547;
+  } 
 
   footer {
     display: flex;
+    justify-content: flex-end;
     gap: 0.4rem;
   }
   footer a {
@@ -141,18 +176,98 @@ const printInfo = [phone, email, LinkedUrl, gitHubUrl];
     height: 32px;
     width: 32px;
     border-radius: 4px;
-    transition: all 0.3s ease;
+    
   }
   footer a:hover {
     color: var(--color-primario);
     border: 1px solid var(--color-primario);
   }
 
-  @media (max-width: 400px) {
-    .info {
-      padding: 0;
-    }
+  footer .mail {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    border: 1px solid var(--color-primario);
+    width: fit-content;
+    padding: 0 8px;
+    display: block;
+    line-height: 2;
+    font-weight: 500;
+    font-family: var(--font-secundaria);
   }
+  footer .mail:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    border: 1px solid var(--color-secundario);
+  }
+
+  @media (max-width: 460px) {
+    .container {
+      flex-direction: column;
+      position: relative;
+      height: max-content;
+    }
+    .info {
+      width: fit-content;
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      z-index: 10;
+    }
+    figure {
+      
+      width: 100%;
+      height: 72vh;
+
+    }
+    figure img {
+      height: 100%;
+      width: 100%;
+
+    }
+    figure::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, #121212 0%, rgba(18, 18, 18, 0.5) 36%, rgba(18, 18, 18, 0) 100%);
+      z-index: 1;
+      border-radius: 8px;
+    };
+    h1 {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    .labels h2 {
+      color: var(--color-quinto);
+      font-size: 1.5rem;
+    }
+    footer a {
+      color: var(--color-quinto);
+      border: 1px solid var(--color-terciario);
+      
+    }
+    span{
+      color: var(--color-quinto);
+    }
+
+  }
+  @media screen and (max-width: 768px) {
+    .container {
+      gap: 1rem;
+    }
+       
+    h1 {
+      font-size: 1rem;
+    }
+    .labels h2 {
+      font-size: 1.5rem;
+
+    }
+    
+  }
+
 
   @media print {
     *,
@@ -169,4 +284,6 @@ const printInfo = [phone, email, LinkedUrl, gitHubUrl];
       display: none;
     }
   }
+
+  
 </style>

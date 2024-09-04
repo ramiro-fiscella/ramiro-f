@@ -1,10 +1,11 @@
 {
   "basics": {
     "name": "Ramiro Fiscella",
-    "label": "Fullstack Developer &  UX/UI Designer.",
-    "image": "/profile-green.png",
+    "label1": "Web Developer",
+    "label2": "UX/UI Designer",
+    "image": "/profile-2.jpg",
     "email": "ramirofiscella@gmail.com",
-    "phone": "+54 2281249246",
+    "phone": "+54 2281349346",
     "url": "https://ramirof.vercel.app",
     "summary": "Soy un Desarrollador Fullstack y un Diseñador UX/UI con una sólida experiencia en la creación de soluciones basadas en estrategias de diseño bien fundamentadas.",
     "location": {
@@ -30,23 +31,32 @@
   "work": [
     {
       "name": "CoopArSi",
-      "position": "Desarrollador WordPress.",
-      "url": "-",
+      "position": "Desarrollador y Diseñador",
+      "url": "https://cooparsi.com.ar/",
       "startDate": "12/2023",
-      "endDate": null,
+      "endDate": "07/2024",
       "summary": "Desarrollador de sitios WordPress para una cooperativa de servicios tecnológicos."
     },
     {
-      "name": "Soy Henry",
-      "position": "Frontend Developer & UX/UI Designer",
-      "url": "hhttps://espacio-flipante-pf.vercel.app/",
+      "name": "BUMBUM APP",
+      "position": "Diseñador UX/UI",
+      "url": "https://www.behance.net/gallery/203048221/BUMBUM/modules/1152039929",
+      "startDate": "02/2024",
+      "endDate": "06/2024",
+      "summary": "Diseñé la identidad de marca, el sistema de diseño y las slides para la presentación del proyecto. Tambié desarrollé el prototipo funcional en alta definición para 'BUMBUM', una applicación movil de búsqueda de eventos y fiestas basadas en la ubicación y preferencias de los usuarios."
+    },
+    {
+      "name": "Espacio Flipante",
+      "position": "Desarrollador Frontend y Diseñador UX/UI",
+      "url": "https://espacio-flipante-pf.vercel.app/",
       "startDate": "08/2023",
       "endDate": "10/2023",
-      "summary": "Lideré el equipo de diseño UX/UI, creando la interface y el prototipado en Figma. Desarrollé e implementé funcionalidades y componentes en React."
+      "summary": "Lideré el equipo de diseño UX/UI. Diseñé la interfaz y el prototipado en Figma. Desarrollé e implementé funcionalidades y componentes en React. (Actualmente el backend se encuentra fuera de servicio)"
     },
     {
       "name": "Freelance",
       "position": "Diseñador Gráfico",
+
       "startDate": "02/2024",
       "endDate": "03/2024",
       "summary": "-"
@@ -63,7 +73,7 @@
     {
       "institution": "Soy Henry",
       "area": "Desarrollo FulStack",
-      "studyType": "Bootcamp",
+      "studyType": "Bootcamp de Desarrollo Web Fullstack.",
       "startDate": "06/2023",
       "endDate": "10/2023"
     }
@@ -108,19 +118,16 @@
       "name": "React"
     },
     {
-      "name": "TypeScript"
-    },
-    {
       "name": "TailwindCSS"
     },
     {
       "name": "Figma"
     },
     {
-      "name": "Mobile-first"
+      "name": "AGILE"
     },
     {
-      "name": "Responsive Design"
+      "name": "Diseño Responsive"
     },
     {
       "name": "Git"
@@ -142,9 +149,6 @@
     },
     {
       "name": "WordPress"
-    },
-    {
-      "name": "Cloudinary"
     }
   ],
   "languages": [
@@ -155,39 +159,58 @@
       "language": "Inglés"
     }
   ],
-  "references": [
-    {
-      "name": "Jane Doe",
-      "reference": "Reference…"
-    }
-  ],
+
   "projects": [
     {
-      "name": "Magic: The Gathering Card Component",
+      "name": "Hojas Cleric",
       "isActive": true,
-      "description": "Recreación de una carta de Magic: The Gathering.",
-      "tech": ["React", "TailwindCSS"],
-      "url": "https://magic-card-delta.vercel.app/"
+      "description": "Web App para crear, editar y almacenar hojas de personajes para el juego de rol Dungeons & Dragons.",
+      "tech": [
+        "React",
+        "TailwindCSS",
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "Auth0",
+        "Cloudinary"
+      ],
+      "url": "https://hojascleric.vercel.app/"
+    },
+
+    {
+      "name": "Fanzine Digital",
+      "isActive": true,
+      "description": "Fanzine digital para compatir textos de la comunidad.",
+      "tech": ["Astro"],
+      "url": ""
     },
     {
       "name": "Portfolio para fotógrafo",
       "isActive": true,
-      "description": "Portfolio moderno para fotógrafo.",
+      "description": "Portfolio moderno para fotógrafo que quería dividir sus trabajos en dos categorías principales.",
       "tech": ["Figma", "React"],
       "url": "https://hernan-fiscella.vercel.app/"
     },
     {
       "name": "SEGA Landpage",
       "isActive": true,
-      "description": "Landing page para SEGA.",
+      "description": "Recreación de una landing page para la consola de videojuegos SEGA Génesis.",
       "tech": ["Figma", "React", "TailwindCSS"],
       "url": "https://react-sega-app.vercel.app/"
     }
   ],
   "interests": [
     {
-      "name": "Wildlife",
-      "keywords": ["Ferrets", "Unicorns"]
+      "name": "Leer"
+    },
+    {
+      "name": "Componer"
+    },
+    {
+      "name": "Nadar"
+    },
+    {
+      "name": "Viajar"
     }
   ]
 }
