@@ -56,10 +56,10 @@
     {
       "name": "Freelance",
       "position": "Diseñador Gráfico",
-
-      "startDate": "02/2024",
-      "endDate": "03/2024",
-      "summary": "-"
+      "url": "https://www.behance.net/ramirofiscella",
+      "startDate": "1/2016",
+      "endDate": "Presente",
+      "summary": "A lo largo de varios años he completado una gran cantidad de proyectos y trabajos como diseñador gráfico. Trabajos como flyers para eventos, portadas de discos, rebrandings, logotipos, contenido para redes, etc. Aun trabajo como diseñador gráfico en proyectos esporádicos."
     }
   ],
   "education": [
@@ -76,6 +76,20 @@
       "studyType": "Bootcamp de Desarrollo Web Fullstack.",
       "startDate": "06/2023",
       "endDate": "10/2023"
+    },
+    {
+      "institution": "INTI",
+      "area": "Desarrollo Web",
+      "studyType": "Bootcamp de Desarrollo Web dictado por el INTI (Instituto Nacional de Tecnología Industrial) del Ministerio de Economía de Argentina.",
+      "startDate": "05/2022",
+      "endDate": "09/2022"
+    },
+    {
+      "institution": "FreeCodeCamp",
+      "area": "Desarrollo Web Responsive",
+      "studyType": "Bootcamp de Desarrollo Web dictado por el freeCodeCamp (300 horas).",
+      "startDate": "02/2022",
+      "endDate": "06/2022"
     }
   ],
   "certificates": [

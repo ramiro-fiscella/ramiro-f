@@ -34,19 +34,18 @@ import { education } from '@cv';
     border-radius: 4px;
     padding: 1.2rem;
     width: 100%;
-    height: max-content;
+    height: 100%;
+    
   }
   ul {
-    display: flex;
-    
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
     gap: 1rem;
-    height: max-content;
   }
+  
   li {
     width: 100%;
-    
-    height: fit-content;
+    height: 100%
   }
 
   h4 {
@@ -57,11 +56,7 @@ import { education } from '@cv';
     letter-spacing: 0.01rem;
     color: var(--color-primario);
   }
-  .date {
-    text-transform: uppercase;
-    font-size: 0.7rem;
-    margin: 4px 0 0 0;
-  }
+
   header {
     display: flex;
     justify-content: space-between;

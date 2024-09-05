@@ -7,7 +7,6 @@ import Mail from '@/icons/Mail.astro';
 import WorldMap from '@/icons/WorldMap.astro';
 import LinkedIn from '@/icons/LinkedIn.astro';
 import GitHub from '@/icons/GitHub.astro';
-import ThemeBtn from '../ThemeBtn.astro';
 
 const { name, label1, label2, image, location, profiles, email } = basics;
 const { city, region } = location;
@@ -28,7 +27,6 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
 ---
 
 <Section>
-  <ThemeBtn />
   <div class="container">
     <div class="info">
       <p>Hello World!</p>
@@ -142,7 +140,7 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
     font-size: 1.3rem;
     text-transform: uppercase;
     font-weight: 800;
-    letter-spacing: 0.08rem;
+    letter-spacing: 0.04rem;
     color: var(--color-primario);
   }
 
@@ -190,7 +188,7 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
     width: fit-content;
     padding: 0 8px;
     display: block;
-    line-height: 2;
+    line-height: 1.76;
     font-weight: 500;
     font-family: var(--font-secundaria);
   }
@@ -231,17 +229,22 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(0deg, #121212 0%, rgba(18, 18, 18, 0.5) 36%, rgba(18, 18, 18, 0) 100%);
+      background: linear-gradient(0deg, #121212 0%, #12121249 36%, rgba(18, 18, 18, 0) 100%);
       z-index: 1;
       border-radius: 8px;
     };
     h1 {
       font-size: 1.3rem;
       font-weight: 600;
+      text-shadow: 0 0 0.2rem #121212;
     }
     .labels h2 {
       color: var(--color-quinto);
       font-size: 1.5rem;
+    }
+    p {
+      color: var(--color-quinto);
+      opacity: .9;
     }
     footer a {
       color: var(--color-quinto);
