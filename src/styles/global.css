@@ -36,7 +36,6 @@ html:before {
   bottom: 0;
   right: 0;
   position: fixed;
-  width: 100vw;
   height: 100%;
   pointer-events: none;
 }
