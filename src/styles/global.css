@@ -43,6 +43,8 @@ html:before {
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+
+  width: fit-content;
   /* cursor: crosshair; */
 
   font-family: var(--font-primaria);
