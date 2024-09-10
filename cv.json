@@ -192,11 +192,11 @@
     },
 
     {
-      "name": "memo | Fanzine Digital",
+      "name": "memoranda | Fanzine Digital",
       "isActive": true,
       "description": "Fanzine digital para compatir textos de la comunidad.",
       "tech": ["Astro", "HTML5", "CSS3", "Javascript", "Typescript"],
-      "url": "https://memoblog.vercel.app/"
+      "url": "https://memoranda.vercel.app/"
     },
     {
       "name": "Portfolio para fotógrafo",
