@@ -37,7 +37,9 @@ html:before {
   right: 0;
   position: fixed;
   height: 100%;
+  width: 110vw;
   pointer-events: none;
+  overflow-x: hidden;
 }
 
 html {
