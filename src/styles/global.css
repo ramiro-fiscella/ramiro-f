@@ -299,7 +299,7 @@ html.dark {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 970px) {
   html {
     width: 140%;
   }
