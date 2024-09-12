@@ -45,7 +45,7 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 
-  width: 140%;
+  width: 100%;
   /* cursor: crosshair; */
 
   font-family: var(--font-primaria);
@@ -297,4 +297,10 @@ html.dark {
 
 .dark .print {
   display: none;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    width: 140%;
+  }
 }
