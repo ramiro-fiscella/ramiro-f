@@ -37,7 +37,6 @@ html:before {
   right: 0;
   position: fixed;
   height: 100%;
-  width: 110vw;
   pointer-events: none;
   overflow-x: hidden;
 }
@@ -46,7 +45,7 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 
-  width: 100%;
+  width: 120%;
   /* cursor: crosshair; */
 
   font-family: var(--font-primaria);
