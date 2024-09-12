@@ -5,9 +5,9 @@
     "label2": "UX/UI Designer",
     "image": "/profile-2.jpg",
     "email": "ramirofiscella@gmail.com",
-    "phone": "+54 2281349346",
+    "phone": "+54 2281 349346",
     "url": "https://ramirof.vercel.app",
-    "summary": "Soy un Desarrollador Fullstack y un Diseñador UX/UI con una sólida experiencia en la creación de soluciones basadas en estrategias de diseño bien fundamentadas.",
+    "summary": "Soy Desarrollador Fullstack y Diseñador UX/UI con una sólida experiencia en la creación de soluciones basadas en estrategias de diseño bien fundamentadas.",
     "location": {
       "address": "",
       "postalCode": "7300",
@@ -59,60 +59,77 @@
       "url": "https://www.behance.net/ramirofiscella",
       "startDate": "1/2016",
       "endDate": "Presente",
-      "summary": "A lo largo de varios años he completado una gran cantidad de proyectos y trabajos como diseñador gráfico. Trabajos como flyers para eventos, portadas de discos, rebrandings, logotipos, contenido para redes, etc. Aun trabajo como diseñador gráfico en proyectos esporádicos."
+      "summary": "He completado una gran cantidad de proyectos y trabajos como diseñador gráfico. Mi tarea como freelance es escuchar las necesidades de mis clientes para entregarles la mejor solución. Diseñé flyers para eventos, portadas de discos, rebrandings, logotipos, contenido para redes, etc. Aun trabajo como diseñador gráfico en proyectos esporádicos."
     }
   ],
   "education": [
     {
-      "institution": "UES21",
-      "area": "Ingeniería y Sistemas",
-      "studyType": "Licenciatura en Informática. Cursado hasta tercer año de la carrera.",
-      "startDate": "03/2014",
-      "endDate": "11/2017"
+      "institution": "Agencia de Habilidades para el Futro",
+      "area": "Diseño UX/UI",
+      "studyType": "Programa de desarrollo Codo a Codo 4.0 - Diseño UX/UI.",
+      "duration": "198 horas",
+      "startDate": "02/2024",
+      "endDate": "06/2024"
     },
     {
       "institution": "Soy Henry",
       "area": "Desarrollo FulStack",
       "studyType": "Bootcamp de Desarrollo Web Fullstack.",
+      "duration": "+800 horas",
       "startDate": "06/2023",
       "endDate": "10/2023"
     },
     {
       "institution": "INTI",
       "area": "Desarrollo Web",
-      "studyType": "Bootcamp de Desarrollo Web dictado por el INTI (Instituto Nacional de Tecnología Industrial) del Ministerio de Economía de Argentina.",
+      "studyType": "Bootcamp de Desarrollo Web (#ArgentinaPrograma) dictado por el INTI (Instituto Nacional de Tecnología Industrial) del Ministerio de Economía de Argentina.",
+      "duration": "60 horas",
       "startDate": "05/2022",
       "endDate": "09/2022"
     },
     {
       "institution": "FreeCodeCamp",
       "area": "Desarrollo Web Responsive",
-      "studyType": "Bootcamp de Desarrollo Web dictado por el freeCodeCamp (300 horas).",
+      "studyType": "Bootcamp de Desarrollo Web dictado por el freeCodeCamp.",
+      "duration": "300 horas",
       "startDate": "02/2022",
       "endDate": "06/2022"
+    },
+    {
+      "institution": "UES21",
+      "area": "Ingeniería y Sistemas",
+      "studyType": "Licenciatura en Informática. Cursado hasta tercer año de la carrera.",
+      "duration": "-",
+      "startDate": "03/2014",
+      "endDate": "11/2017"
     }
   ],
   "certificates": [
     {
-      "name": "Certificate",
+      "name": "Codo a Codo 4.0 - Diseño UX/UI",
+      "date": "29/06/2024",
+      "url": "https://drive.google.com/file/d/1eR3uAbUhdtYbvd00huJAu6tVeFzwTsC_/view?usp=sharing"
+    },
+    {
+      "name": "Desarrollo Full Stack",
       "date": "30/09/2023",
       "issuer": "Soy Henry",
       "url": "https://drive.google.com/file/d/140KqMxEGXF07deEG_poyZEUyu5HXYcto/view?usp=sharing"
     },
     {
-      "name": "Certificate",
+      "name": "Argentina Programa - Desarrollo Web",
       "date": "12/09/2022",
       "issuer": "INTI",
       "url": "https://drive.google.com/file/d/14-AnVtU5IymXD4MPjm4XY5UyKyTcQNL9/view?usp=sharing"
     },
     {
-      "name": "Certificate",
+      "name": "Responsive Web Design",
       "date": "26/01/2022",
       "issuer": "FreeCodeCamp",
       "url": "https://www.freecodecamp.org/certification/kaliv/responsive-web-design"
     },
     {
-      "name": "Certificate",
+      "name": "English Certificate C2 Proficient (74/100)",
       "date": "02/08/2023",
       "issuer": "EFSET",
       "url": "https://cert.efset.org/9RQxJJ"
