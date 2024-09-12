@@ -45,7 +45,7 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 
-  width: 140%;
+  width: 100%;
   /* cursor: crosshair; */
 
   font-family: var(--font-primaria);
