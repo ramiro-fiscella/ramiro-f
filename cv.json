@@ -38,7 +38,7 @@
       "summary": "Desarrollador de sitios WordPress para una cooperativa de servicios tecnológicos."
     },
     {
-      "name": "BUMBUM APP",
+      "name": "Eclectic",
       "position": "Diseñador UX/UI",
       "url": "https://www.behance.net/gallery/203048221/BUMBUM/modules/1152039929",
       "startDate": "02/2024",
@@ -136,51 +136,22 @@
     }
   ],
   "skills": [
-    {
-      "name": "HTML"
-    },
-    {
-      "name": "CSS"
-    },
-    {
-      "name": "JavaScript"
-    },
-    {
-      "name": "React"
-    },
-    {
-      "name": "TailwindCSS"
-    },
-    {
-      "name": "Figma"
-    },
-    {
-      "name": "AGILE"
-    },
-    {
-      "name": "Diseño Responsive"
-    },
-    {
-      "name": "Git"
-    },
-    {
-      "name": "SEO"
-    },
-    {
-      "name": "Node.js"
-    },
-    {
-      "name": "Express"
-    },
-    {
-      "name": "PostgreSQL"
-    },
-    {
-      "name": "Restful API"
-    },
-    {
-      "name": "WordPress"
-    }
+    { "name": "HTML5" },
+    { "name": "CSS" },
+    { "name": "JavaScript" },
+    { "name": "React" },
+    { "name": "TailwindCSS" },
+    { "name": "SASS" },
+    { "name": "Figma" },
+    { "name": "AGILE" },
+    { "name": "Diseño Responsive" },
+    { "name": "Git" },
+    { "name": "SEO" },
+    { "name": "Node.js" },
+    { "name": "Express" },
+    { "name": "PostgreSQL" },
+    { "name": "Restful API" },
+    { "name": "WordPress" }
   ],
   "languages": [
     {
@@ -207,12 +178,18 @@
       ],
       "url": "https://hojascleric.vercel.app/"
     },
-
+    {
+      "name": "BUMBUM APP",
+      "isActive": true,
+      "description": "Diseño e investigación de mercador y usuarios para una aplicación móvil de búsqueda de fiestas",
+      "tech": ["Figma", "Slides", "Trello", "Notion", "Photoshop", "Whimsical"],
+      "url": "https://www.behance.net/gallery/203048221/BUMBUM/modules/1152039929"
+    },
     {
       "name": "memoranda | Fanzine Digital",
       "isActive": true,
       "description": "Fanzine digital para compatir textos de la comunidad.",
-      "tech": ["Astro", "HTML5", "CSS3", "Javascript", "Typescript"],
+      "tech": ["Astro", "HTML5", "CSS3", "Javascript", "Typescript", "MDX"],
       "url": "https://memoranda.vercel.app/"
     },
     {
