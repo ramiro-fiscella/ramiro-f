@@ -178,6 +178,7 @@
       ],
       "url": "https://hojascleric.vercel.app/"
     },
+
     {
       "name": "BUMBUM APP",
       "isActive": true,
@@ -195,9 +196,16 @@
     {
       "name": "Portfolio para fotógrafo",
       "isActive": true,
-      "description": "Portfolio moderno para fotógrafo que quería dividir sus trabajos en dos categorías principales.",
-      "tech": ["Figma", "React"],
-      "url": "https://hernan-fiscella.vercel.app/"
+      "description": "Prototipo de portfolio moderno para fotógrafo.",
+      "tech": ["Figma", "Webflow"],
+      "url": "https://hernan-fiscella.webflow.io/"
+    },
+    {
+      "name": "Atelier Ventura",
+      "isActive": true,
+      "description": "Proyecto de estudio para una firma de arquitectura.",
+      "tech": ["Webflow"],
+      "url": "https://atelier-ventura.webflow.io/"
     },
     {
       "name": "SEGA Landpage",
