@@ -1,9 +1,9 @@
 {
   "basics": {
     "name": "Ramiro Fiscella",
-    "label1": "Web Developer",
+    "label1": "Fullstack Developer",
     "label2": "UX/UI Designer",
-    "image": "/profile-2.jpg",
+    "image": "/hero-img.jpg",
     "email": "ramirofiscella@gmail.com",
     "phone": "+54 2281 349346",
     "url": "https://ramirof.vercel.app",

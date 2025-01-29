@@ -1,14 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+*/
 @import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300..500;1,300..500&display=swap');
 :root {
   --color-primario: #fb521f;
-  --color-secundario: #121212;
-  --color-terciario: #888;
+  --color-secundario: #12110f;
+  --color-terciario: #ddd;
   --color-cuarto: #333;
-  --color-quinto: #ddd;
+  --color-quinto: #fafafa;
 
   --font-primaria: 'Anek Devanagari', sans-serif;
   --font-secundaria: 'Space Grotesk', monospace;
+  /*
+  --font-primaria: 'DM Sans', sans-serif;
+  */
 }
 
 ::selection {
@@ -21,15 +27,17 @@
   background-color: #fb521f;
   color: var(--color-secundario);
 }
+/*
+OVERLAY RUIDO
+
 html:before {
   content: '';
   background-color: transparent;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");
   background-repeat: repeat;
   background-size: 182px;
-  backdrop-filter: blur(8px);
   background-color: var(--color-secundario);
-  opacity: 0.08;
+  opacity: 0.04;
   z-index: 100;
   top: 0;
   left: 0;
@@ -40,6 +48,20 @@ html:before {
   pointer-events: none;
   overflow-x: hidden;
 }
+*/
+
+* {
+  font-family: var(--font-primaria);
+}
+*::-webkit-scrollbar {
+  width: 0.2rem;
+  height: 0.1rem;
+  background-color: var(--color-secundario);
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-primario);
+  border-radius: 0.2rem;
+}
 
 html {
   scroll-behavior: smooth;
@@ -48,14 +70,13 @@ html {
   width: 100%;
   /* cursor: crosshair; */
 
-  font-family: var(--font-primaria);
   line-height: 1;
   font-size: 1.5rem;
   font-optical-sizing: auto;
 
   /* background-color: var(--color-quinto); */
   background: var(--color-quinto);
-  background: linear-gradient(
+  /* background: linear-gradient(
     312deg,
     #f07a56 0%,
     #d7b2a9 8%,
@@ -63,6 +84,7 @@ html {
     #d8d8d8 88%,
     #dedede 96%
   );
+  */
 }
 body {
   margin: 0;
@@ -71,9 +93,9 @@ body {
 }
 main {
   position: relative;
-  margin: 4rem auto;
+  margin: auto;
   width: 100%;
-  max-width: 1024px;
+  max-width: 1440px;
 }
 
 a {
@@ -97,8 +119,7 @@ ul {
 
 h1 {
   margin: 0;
-  font-family: var(--font-secundaria);
-  font-weight: 900;
+  font-weight: 600;
   line-height: 1;
   color: var(--color-secundario);
 }
@@ -108,14 +129,12 @@ h2 {
 }
 
 h3 {
-  font-family: var(--font-primaria);
   margin: 0;
   font-weight: 400;
   color: var(--color-cuarto);
 }
 
 h4 {
-  font-family: var(--font-secundaria);
   font-optical-sizing: auto;
   margin: 4px 0 12px;
   color: var(--color-cuarto);
@@ -169,7 +188,6 @@ p {
 .tag {
   user-select: none;
   font-size: 0.8rem;
-  font-family: var(--font-secundaria);
   color: var(--color-terciario);
   display: inline-flex;
   align-items: center;
@@ -182,7 +200,7 @@ p {
   border-color: transparent;
 }
 figure img {
-  box-shadow: 0 0 40px 1px #ff3c005a;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
 }
 .project,
 .experience-article,
@@ -222,13 +240,14 @@ figure img {
 
 html.dark {
   background: var(--color-secundario);
-  background: linear-gradient(
+  /*background: linear-gradient(
     312deg,
     #6c1c05 0%,
     #3c1308 8%,
     #151212 28%,
-    #050404 66%
+    #12110f 66%
   );
+  */
 }
 .dark main {
   color: var(--color-quinto);
@@ -284,7 +303,7 @@ html.dark {
   color: var(--color-primario);
 }
 .dark figure img {
-  box-shadow: 0 0 40px 1px #451b0e5a;
+  box-shadow: 0 0 40px 1px #1c18175a;
 }
 .dark .project,
 .dark .education,
