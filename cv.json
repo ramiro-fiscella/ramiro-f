@@ -30,6 +30,14 @@
   },
   "work": [
     {
+      "name": "Makisan Tech",
+      "position": "Diseñador UX/UI y Desarrollador Frontend",
+      "url": "https://www.makisantech.com.ar/",
+      "startDate": "10/2024",
+      "endDate": "02/2025",
+      "summary": "Diseñé la interfaz de usuario y dashboard, teniendo en cuenta los principios de UX/UI, y colaboré en el desarrollo utilizando JavaScript/Svelte y CSS."
+    },
+    {
       "name": "CoopArSi",
       "position": "Desarrollador y Diseñador",
       "url": "https://cooparsi.com.ar/",
@@ -52,14 +60,6 @@
       "startDate": "08/2023",
       "endDate": "10/2023",
       "summary": "Lideré el equipo de diseño UX/UI. Diseñé la interfaz y el prototipado en Figma. Desarrollé e implementé funcionalidades y componentes en React. (Actualmente el backend se encuentra fuera de servicio)"
-    },
-    {
-      "name": "Freelance",
-      "position": "Diseñador Gráfico",
-      "url": "https://www.behance.net/ramirofiscella",
-      "startDate": "1/2016",
-      "endDate": "Presente",
-      "summary": "He completado una gran cantidad de proyectos y trabajos como diseñador gráfico. Mi tarea como freelance es escuchar las necesidades de mis clientes para entregarles la mejor solución. Diseñé flyers para eventos, portadas de discos, rebrandings, logotipos, contenido para redes, etc. Aun trabajo como diseñador gráfico en proyectos esporádicos."
     }
   ],
   "education": [
