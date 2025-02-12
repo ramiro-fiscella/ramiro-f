@@ -140,23 +140,32 @@
       "url": "https://cert.efset.org/9RQxJJ"
     }
   ],
-  "skills": [
+  "designer": [
+    { "name": "User Research" },
+    { "name": "Wireframing" },
+    { "name": "Prototyping" },
+    { "name": "Information Architecture" },
+    { "name": "Usability Testing" },
+    { "name": "Competitive Analisis" },
+    { "name": "Visual Design" },
+    { "name": "Microinteractions" },
+    { "name": "Branding" },
+    { "name": "Responsive Design" },
+    { "name": "SEO" }
+  ],
+  "developer": [
     { "name": "HTML5" },
     { "name": "CSS" },
     { "name": "JavaScript" },
     { "name": "React" },
     { "name": "TailwindCSS" },
-    { "name": "SASS" },
-    { "name": "Figma" },
-    { "name": "AGILE" },
-    { "name": "Responsive Design" },
-    { "name": "Git" },
-    { "name": "SEO" },
+    { "name": "Astro" },
+    { "name": "Webflow" },
     { "name": "Node.js" },
     { "name": "Express" },
     { "name": "PostgreSQL" },
     { "name": "Restful API" },
-    { "name": "WordPress" }
+    { "name": "Git" }
   ],
   "languages": [
     {

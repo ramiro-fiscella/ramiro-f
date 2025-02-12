@@ -1,32 +1,72 @@
 ---
 import Section from '../Section.astro';
 
-import { skills } from '@cv';
+import { designer, developer } from '@cv';
 ---
 
-<Section title="Technologies and tools">
-  <ul>
-    {
-      skills.map(({ name }) => {
-        return (
-          <>
-            <li>
-              <span class="tag">{name}</span>
-            </li>
-          </>
-        );
-      })
-    }
-  </ul>
+<Section>
+  <div class="skills">
+    <h2>Designer</h2>
+    <ul>
+      {
+        designer.map(({ name }) => {
+          return (
+            <>
+              <li>
+                <span class="tag">{name}</span>
+              </li>
+            </>
+          );
+        })
+      }
+    </ul>
+    <h2>Developer</h2>
+    <ul>
+      {
+        developer.map(({ name }) => {
+          return (
+            <>
+              <li>
+                <span class="tag">{name}</span>
+              </li>
+            </>
+          );
+        })
+      }
+    </ul>
+  </div>
 </Section>
 
 <style>
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 500;
+    color: var(--color-texto);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    margin-top: 0;
+    text-align: right;
+  }
   ul {
     display: inline-flex;
+    align-items: end;
+    justify-content: end;
     flex-wrap: wrap;
     color: var(--color-terciario);
     gap: 0.6rem;
     list-style: none;
     padding: 0;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      text-align: left;
+    }
+    ul {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
   }
 </style>

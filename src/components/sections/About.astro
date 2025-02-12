@@ -1,10 +1,60 @@
 ---
-import Section from "../Section.astro";
+import Section from '../Section.astro';
 
-import { basics } from "@cv";
-const { summary } = basics;
+import Technologies from '../sections/Technologies.astro';
 ---
 
-<Section title="Sobre mí">
-  <p>{summary}</p>
+<Section title="About me">
+  <div class="about-container">
+    <div class="about-technologies">
+      <Technologies />
+    </div>
+    <div class="about-text">
+      <p>
+        I’m a UX/UI Designer and Fullstack Developer with experience in both
+        collaborative agile teams and independent projects. I blend analytical
+        thinking with creativity to craft functional, intuitive, and
+        aesthetically refined digital products.
+        <br /><br />
+        My focus is on delivering high-quality, user-centered solutions while enjoying
+        the process.
+        <br /><br />
+        When I'm not designing or coding, you’ll likely find me playing guitar, reading,
+        or enjoying a great coffee, always exploring new ideas.
+      </p>
+    </div>
+  </div>
 </Section>
+
+<style>
+  .about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  p {
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--color-texto);
+  }
+
+  .about-technologies {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    .about-container {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+      line-height: 1.5;
+    }
+  }
+</style>
