@@ -1,8 +1,12 @@
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
 export default defineConfig({
-  devToolbar: {
-    enabled: false,
+  locals: (request) => {
+    const lang = request.headers['accept-language']
+      ?.split(',')[0]
+      .startsWith('es')
+      ? 'es'
+      : 'en';
+    return { lang };
   },
 });

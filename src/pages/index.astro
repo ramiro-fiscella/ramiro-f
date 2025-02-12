@@ -20,12 +20,20 @@ import NavBar from '@/components/NavBar.astro';
   <main>
     <Hero />
     <Experience />
-    <Technologies />
     <Projects />
     <About />
+    <Technologies />
     <Education />
     <Languages />
 
     <Footer />
   </main>
 </Layout>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+  }
+</style>

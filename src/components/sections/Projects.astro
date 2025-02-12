@@ -4,126 +4,149 @@ import Section from '../Section.astro';
 import { projects } from '@cv';
 ---
 
-<Section title="Proyectos">
+<Section title="Projects">
   <ul class="projects">
     {
-      projects.map(({ name, description, tech, url }) => {
-        return (
-          <>
-            <li class="project">
-              <article>
-                <header>
-                  <h4>{name}</h4>
-                  <p>{description}</p>
-                </header>
-                <footer class="project-footer">
-                  <p>Tecnologías</p>
-                  <ul class="tech">
-                    {tech.map((tech) => {
-                      return (
-                        <li>
-                          <span class="tag">{tech}</span>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </footer>
-              </article>
-                <a href={url} target="_blank" rel="noopener noreferer">
-                  Demo
-                </a>
-            </li>
-          </>
-        );
-      })
+      projects.map(({ name, description, roles, url, image }) => (
+        <li class="project">
+          <img src={image} alt={name} class="project-image" />
+          <article class="data">
+            <header>
+              <h3>{name}</h3>
+              <p>{description}</p>
+            </header>
+            <footer class="project-footer">
+              <ul class="roles">
+                {roles.map((roles) => (
+                  <li>
+                    <span class="tag">{roles}</span>
+                  </li>
+                ))}
+              </ul>
+            </footer>
+            <a href={url} target="_blank" rel="noopener noreferer">
+              Demo
+            </a>
+          </article>
+        </li>
+      ))
     }
   </ul>
 </Section>
 
 <style>
-  /* ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  } */
-  ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-    gap: 1rem;
-  }
-  .project   {
-    position: relative;
+  .data {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
     gap: 1rem;
-    border-radius: 4px;
+    width: 100%;
     padding: 1rem;
-    width: 100%;
-    min-height: 100%;
   }
-  
+  .projects {
+    columns: 2;
+    column-width: 20rem;
+    /* column-rule: 1px solid rgba(255, 255, 255, 0.2); */
 
-  article {
-    width: 100%;
+    column-gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .project {
+    height: webkit-fill-available;
     display: flex;
     flex-direction: column;
-    gap: .2rem;
-    
+    align-items: flex-start;
+    justify-content: space-between;
+    border-radius: 12px;
+
+    background: var(--color-fondo-proyecto);
+    color: var(--color-texto-proyecto);
+    border: 1px solid var(--color-borde);
+
+    transition: all 0.3s ease;
+    break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+  .project h3,
+  .project p,
+  .project-footer {
+    color: var(--color-texto-proyecto);
+  }
+  h3 {
+    text-wrap: balance;
+    /* color: var(--color-quinto); */
   }
 
-  .tech {
-    display: inline-flex;
+  p {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    margin-top: 1rem;
+  }
+
+  .project:hover {
+    border-color: var(--color-fondo);
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.164);
+  }
+
+  .project-image {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .roles {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
     gap: 0.4rem;
   }
-  .tag{
-    font-size: 0.7rem;
-    padding: 6px 8px;
-  }
 
-
-  a {
-    position:relative;
-    bottom: 0;
+  .tag {
     font-size: 0.8rem;
-    font-weight: 400;
-    font-family: var(--font-secundaria);
-    text-transform: uppercase;
-    text-align: center;
-    color: var(--color-primario);
-    border: 1px solid var(--color-primario);
     padding: 8px 16px;
-    width: 100%;
-    border-radius: 8px;
+  }
+  a {
+    font-size: 0.8rem;
+    /* text-transform: uppercase; */
+    font-weight: 600;
+    padding: 8px 24px;
+    border-radius: 12px;
+    border: 1px solid var(--color-borde);
+    color: var(--color-texto);
     transition: all 0.3s ease;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   }
-  a:hover {
-    background: var(--color-primario);
-    color: var(--color-secundario);
+
+  a:hover,
+  a:focus-visible {
+    background-color: var(--color-boton-hover);
+    color: var(--color-texto-boton-hover);
+    border: 1px solid var(--color-boton-hover);
+    transform: scale(1.05);
   }
+
+  a:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 8px rgba(255, 255, 255, 0.15);
+  }
+
   .project-footer {
-    margin-top: .6rem;
-    padding-top: .4rem;
+    border: none;
+
+    margin-top: 1%;
   }
+
   .project-footer p {
-    margin: .4rem 0;
-  }
-
-
-  @media print {
-    * {
-      color: black;
-      background: white;
-    }
-
-    a {
-      display: none;
-    }
-    ul {
-      grid-template-columns: none;
-    }
+    margin: 0.4rem 0;
   }
 </style>

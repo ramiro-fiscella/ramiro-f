@@ -1,30 +1,75 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
-*/
+/*
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300..500;1,300..500&display=swap');
-:root {
-  --color-primario: #fb521f;
-  --color-secundario: #12110f;
-  --color-terciario: #ddd;
-  --color-cuarto: #333;
-  --color-quinto: #fafafa;
+*/
 
-  --font-primaria: 'Anek Devanagari', sans-serif;
+:root {
+  /* --color-primario: #fb521f; */
+  --color-primario: #ff4c24;
+  --color-primario-2: #ff6435;
+  --color-secundario: #130f0e;
+  --color-terciario: #948e8e;
+  --color-cuarto: #3a3a3f;
+  --color-quinto: #eaeaea;
+
+  --font-primaria: 'Montreal', sans-serif;
+  /* --font-primaria: 'Anek Devanagari', sans-serif; */
+
   --font-secundaria: 'Space Grotesk', monospace;
   /*
   --font-primaria: 'DM Sans', sans-serif;
   */
 }
 
+:root {
+  --color-fondo: #ffffff;
+  --color-texto: #130f0e;
+  --color-borde: #c0c0c0;
+
+  --color-fondo-proyecto: #f8f8f8; /* Color claro */
+  --color-texto-proyecto: #130f0e; /* Texto oscuro */
+
+  --color-boton: #000000; /* Negro en tema claro */
+  --color-texto-boton: #ffffff; /* Texto blanco en tema claro */
+  --color-boton-hover: #333333;
+  --color-texto-boton-hover: #ffffff;
+
+  --color-experiencia-fondo: #f8f8f8;
+  --color-experiencia-borde: rgba(0, 0, 0, 0.1);
+  --color-experiencia-texto: #222;
+
+  background: var(--color-fondo);
+}
+
+html.dark {
+  --color-fondo: #130f0e;
+  --color-texto: #eaeaea;
+  --color-borde: #333;
+
+  --color-fondo-proyecto: #1c1817;
+  --color-texto-proyecto: #eaeaea;
+
+  --color-boton: #ffffff;
+  --color-texto-boton: #000000;
+  --color-boton-hover: #eaeaea;
+  --color-texto-boton-hover: #000000;
+
+  --color-experiencia-fondo: var(--color-secundario);
+  --color-experiencia-borde: rgba(255, 255, 255, 0.1);
+  --color-experiencia-texto: var(--color-quinto);
+
+  background: var(--color-secundario);
+}
+
 ::selection {
-  background-color: #fb521f;
+  background-color: var(--color-fondo);
   color: var(--color-secundario);
 }
 
 /* Para Firefox */
 ::-moz-selection {
-  background-color: #fb521f;
+  background-color: var(--color-primario);
   color: var(--color-secundario);
 }
 /*
@@ -62,40 +107,33 @@ html:before {
   background-color: var(--color-primario);
   border-radius: 0.2rem;
 }
+*::selection {
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
+}
 
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 
   width: 100%;
-  /* cursor: crosshair; */
-
-  line-height: 1;
-  font-size: 1.5rem;
+  /* cursor: pointer; */
+  font-size: 1rem;
   font-optical-sizing: auto;
 
-  /* background-color: var(--color-quinto); */
   background: var(--color-quinto);
-  /* background: linear-gradient(
-    312deg,
-    #f07a56 0%,
-    #d7b2a9 8%,
-    #d4d4d4 18%,
-    #d8d8d8 88%,
-    #dedede 96%
-  );
-  */
 }
 body {
   margin: 0;
   padding: 1rem;
   min-width: min-content;
+  overflow: hidden;
 }
 main {
   position: relative;
   margin: auto;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1240px;
 }
 
 a {
@@ -187,14 +225,14 @@ p {
 
 .tag {
   user-select: none;
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: var(--color-terciario);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--color-terciario);
-  padding: 8px 12px;
-  border-radius: 4px;
+  border: 1px solid var(--color-cuarto);
+  padding: 12px 20px;
+  border-radius: 99px;
 }
 .tag:hover {
   border-color: transparent;
@@ -319,7 +357,7 @@ html.dark {
 }
 
 @media screen and (max-width: 970px) {
-  html {
-    width: 140%;
+  body {
+    padding: 0.5rem;
   }
 }

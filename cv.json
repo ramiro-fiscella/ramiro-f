@@ -7,7 +7,7 @@
     "email": "ramirofiscella@gmail.com",
     "phone": "+54 2281 349346",
     "url": "https://ramirof.vercel.app",
-    "summary": "Soy un Desarrollador Web con una sólida experiencia en la creación de soluciones basadas en estrategias de diseño bien fundamentadas.",
+    "summary": "I’m a UX/UI Designer and Fullstack Developer with experience in both collaborative agile teams and independent projects. I blend analytical thinking with creativity to craft functional, intuitive, and aesthetically refined digital products. My focus is on delivering high-quality, user-centered solutions while enjoying the process. When I'm not designing or coding, you’ll likely find me playing guitar, reading, or enjoying a great coffee, always exploring new ideas.",
     "location": {
       "address": "",
       "postalCode": "7300",
@@ -25,80 +25,85 @@
         "network": "LinkedIn",
         "username": "ramiro-fiscella",
         "url": "https://linkedin.com/in/ramiro-fiscella"
+      },
+      {
+        "network": "Behance",
+        "username": "ramiro-fiscella",
+        "url": "https://behance.net/ramiro-fiscella"
       }
     ]
   },
   "work": [
     {
       "name": "Makisan Tech",
-      "position": "Diseñador UX/UI y Desarrollador Frontend",
+      "position": "UX/UI Designer & Frontend Developer",
       "url": "https://www.makisantech.com.ar/",
       "startDate": "10/2024",
       "endDate": "02/2025",
-      "summary": "Diseñé la interfaz de usuario y dashboard, teniendo en cuenta los principios de UX/UI, y colaboré en el desarrollo utilizando JavaScript/Svelte y CSS."
+      "summary": "Designed the user interface and dashboard, considering UX/UI principles, and collaborated in development using JavaScript/Svelte and CSS."
     },
     {
       "name": "CoopArSi",
-      "position": "Desarrollador y Diseñador",
+      "position": "Developer & Designer",
       "url": "https://cooparsi.com.ar/",
       "startDate": "12/2023",
       "endDate": "07/2024",
-      "summary": "Desarrollador de sitios WordPress para una cooperativa de servicios tecnológicos."
+      "summary": "Developed WordPress websites for a technology services cooperative."
     },
     {
       "name": "Eclectic",
-      "position": "Diseñador UX/UI",
+      "position": "UX/UI Designer",
       "url": "https://www.behance.net/gallery/203048221/BUMBUM/modules/1152039929",
       "startDate": "02/2024",
       "endDate": "06/2024",
-      "summary": "Diseñé la identidad de marca, el sistema de diseño y las slides para la presentación del proyecto. Tambié desarrollé el prototipo funcional en alta definición para 'BUMBUM', una applicación movil de búsqueda de eventos y fiestas basadas en la ubicación y preferencias de los usuarios."
+      "summary": "Designed the brand identity, design system, and presentation slides. Also developed a high-fidelity interactive prototype for 'BUMBUM,' a mobile app for event and party discovery based on user location and preferences."
     },
     {
       "name": "Espacio Flipante",
-      "position": "Desarrollador Frontend y Diseñador UX/UI",
+      "position": "Frontend Developer & UX/UI Designer",
       "url": "https://espacio-flipante-pf.vercel.app/",
       "startDate": "08/2023",
       "endDate": "10/2023",
-      "summary": "Lideré el equipo de diseño UX/UI. Diseñé la interfaz y el prototipado en Figma. Desarrollé e implementé funcionalidades y componentes en React. (Actualmente el backend se encuentra fuera de servicio)"
+      "summary": "Led the UX/UI design team. Designed the interface and prototyping in Figma. Developed and implemented features and components in React. (Currently, the backend is not operational)"
     }
   ],
   "education": [
     {
-      "institution": "Agencia de Habilidades para el Futro",
-      "area": "Diseño UX/UI",
-      "studyType": "Programa de desarrollo Codo a Codo 4.0 - Diseño UX/UI.",
-      "duration": "198 horas",
+      "institution": "Agencia de Habilidades para el Futuro",
+      "area": "UX/UI Design",
+      "studyType": "Codo a Codo 4.0 Development Program - UX/UI Design.",
+      "duration": "198 hours",
       "startDate": "02/2024",
       "endDate": "06/2024"
     },
     {
       "institution": "Soy Henry",
-      "area": "Desarrollo FulStack",
-      "studyType": "Bootcamp de Desarrollo Web Fullstack.",
-      "duration": "+800 horas",
+      "area": "Fullstack Development",
+      "studyType": "Fullstack Web Development Bootcamp.",
+      "duration": "+800 hours",
       "startDate": "06/2023",
       "endDate": "10/2023"
     },
     {
       "institution": "INTI",
-      "area": "Desarrollo Web",
-      "studyType": "Bootcamp de Desarrollo Web (#ArgentinaPrograma) dictado por el INTI (Instituto Nacional de Tecnología Industrial) del Ministerio de Economía de Argentina.",
-      "duration": "60 horas",
+      "area": "Web Development",
+      "studyType": "Web Development Bootcamp (#ArgentinaPrograma) by INTI (National Institute of Industrial Technology) under the Ministry of Economy of Argentina.",
+      "duration": "60 hours",
       "startDate": "05/2022",
       "endDate": "09/2022"
     },
     {
       "institution": "FreeCodeCamp",
-      "area": "Desarrollo Web Responsive",
-      "studyType": "Bootcamp de Desarrollo Web dictado por el freeCodeCamp.",
-      "duration": "300 horas",
+      "area": "Responsive Web Development",
+      "studyType": "Web Development Bootcamp by freeCodeCamp.",
+      "duration": "300 hours",
       "startDate": "02/2022",
       "endDate": "06/2022"
     },
     {
       "institution": "UES21",
-      "area": "Ingeniería y Sistemas",
-      "studyType": "Licenciatura en Informática. Cursado hasta tercer año de la carrera.",
+      "area": "Engineering & Systems",
+      "studyType": "Bachelor’s Degree in Computer Science. Completed up to the third year.",
       "duration": "-",
       "startDate": "03/2014",
       "endDate": "11/2017"
@@ -106,18 +111,18 @@
   ],
   "certificates": [
     {
-      "name": "Codo a Codo 4.0 - Diseño UX/UI",
+      "name": "Codo a Codo 4.0 - UX/UI Design",
       "date": "29/06/2024",
       "url": "https://drive.google.com/file/d/1eR3uAbUhdtYbvd00huJAu6tVeFzwTsC_/view?usp=sharing"
     },
     {
-      "name": "Desarrollo Full Stack",
+      "name": "Full Stack Development",
       "date": "30/09/2023",
       "issuer": "Soy Henry",
       "url": "https://drive.google.com/file/d/140KqMxEGXF07deEG_poyZEUyu5HXYcto/view?usp=sharing"
     },
     {
-      "name": "Argentina Programa - Desarrollo Web",
+      "name": "Argentina Programa - Web Development",
       "date": "12/09/2022",
       "issuer": "INTI",
       "url": "https://drive.google.com/file/d/14-AnVtU5IymXD4MPjm4XY5UyKyTcQNL9/view?usp=sharing"
@@ -144,7 +149,7 @@
     { "name": "SASS" },
     { "name": "Figma" },
     { "name": "AGILE" },
-    { "name": "Diseño Responsive" },
+    { "name": "Responsive Design" },
     { "name": "Git" },
     { "name": "SEO" },
     { "name": "Node.js" },
@@ -155,18 +160,17 @@
   ],
   "languages": [
     {
-      "language": "Español"
+      "language": "Spanish"
     },
     {
-      "language": "Inglés"
+      "language": "English"
     }
   ],
-
   "projects": [
     {
-      "name": "Hojas Cleric",
+      "name": "Cleric Sheets",
       "isActive": true,
-      "description": "Web App para crear, editar y almacenar hojas de personajes para el juego de rol Dungeons & Dragons.",
+      "description": "Web app for creating, editing, and storing character sheets for the Dungeons & Dragons role-playing game.",
       "tech": [
         "React",
         "TailwindCSS",
@@ -176,57 +180,58 @@
         "Auth0",
         "Cloudinary"
       ],
-      "url": "https://hojascleric.vercel.app/"
+      "roles": ["Product Designer", "Fullstack Developer", "Web App"],
+      "url": "https://hojascleric.vercel.app/",
+      "image": "/images/cleric-sheets.png"
     },
-
     {
       "name": "BUMBUM APP",
       "isActive": true,
-      "description": "Diseño e investigación UX/UI para una aplicación móvil de búsqueda de fiestas",
+      "description": "UX/UI research and design for a mobile party-finding app.",
       "tech": ["Figma", "Slides", "Trello", "Notion", "Photoshop", "Whimsical"],
-      "url": "https://www.behance.net/gallery/203048221/BUMBUM/modules/1152039929"
+      "roles": ["UX/UI Designer", "Prototyping", "Mobile App"],
+      "url": "https://www.behance.net/gallery/203048221/BUMBUM/modules/1152039929",
+      "image": "/images/bumbum-app.png"
     },
     {
-      "name": "memoranda | Fanzine Digital",
+      "name": "Cleric Sheets",
       "isActive": true,
-      "description": "Fanzine digital para compatir textos de la comunidad.",
-      "tech": ["Astro", "HTML5", "CSS3", "Javascript", "Typescript", "MDX"],
-      "url": "https://memoranda.vercel.app/"
+      "description": "Web app for creating, editing, and storing character sheets for the Dungeons & Dragons role-playing game.",
+      "tech": [
+        "React",
+        "TailwindCSS",
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "Auth0",
+        "Cloudinary"
+      ],
+      "roles": ["Product Designer", "Fullstack Developer", "Web App"],
+      "url": "https://hojascleric.vercel.app/",
+      "image": "/images/cleric-sheets.png"
     },
     {
-      "name": "Portfolio para fotógrafo",
+      "name": "BUMBUM APP",
       "isActive": true,
-      "description": "Prototipo de portfolio moderno para fotógrafo.",
-      "tech": ["Figma", "Webflow"],
-      "url": "https://hernan-fiscella.webflow.io/"
-    },
-    {
-      "name": "Atelier Ventura",
-      "isActive": true,
-      "description": "Proyecto de estudio para una firma de arquitectura.",
-      "tech": ["Webflow"],
-      "url": "https://atelier-ventura.webflow.io/"
-    },
-    {
-      "name": "SEGA Landpage",
-      "isActive": true,
-      "description": "Recreación de una landing page para la consola de videojuegos SEGA Génesis.",
-      "tech": ["Figma", "React", "TailwindCSS"],
-      "url": "https://react-sega-app.vercel.app/"
+      "description": "UX/UI research and design for a mobile party-finding app.",
+      "tech": ["Figma", "Slides", "Trello", "Notion", "Photoshop", "Whimsical"],
+      "roles": ["UX/UI Designer", "Prototyping", "Mobile App"],
+      "url": "https://www.behance.net/gallery/203048221/BUMBUM/modules/1152039929",
+      "image": "/images/bumbum-app.png"
     }
   ],
   "interests": [
     {
-      "name": "Leer"
+      "name": "Reading"
     },
     {
-      "name": "Componer"
+      "name": "Composing"
     },
     {
-      "name": "Nadar"
+      "name": "Swimming"
     },
     {
-      "name": "Viajar"
+      "name": "Traveling"
     }
   ]
 }

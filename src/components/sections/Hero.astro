@@ -18,25 +18,27 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
 <Section>
   <div class="container">
     <div class="info">
-      <h1 class="name">
-        Hello, I'm
-        <br />
-        {name}
-      </h1>
-
-      <div class="labels">
-        <h2>
-          A {label1}
+      <div class="title">
+        <h1 class="name">
+          Hello, I'm
           <br />
-          &
-          {label2} with <br />
-          +2 years experience
-        </h2>
+          {name}
+        </h1>
+
+        <div class="labels">
+          <h2>
+            A {label1}
+            <br />
+            &
+            {label2} with <br />
+            +2 years experience
+          </h2>
+        </div>
+        <span>
+          <WorldMap />
+          {city}, {region}
+        </span>
       </div>
-      <span>
-        <WorldMap />
-        {city}, {region}
-      </span>
 
       <div class="print">
         {printInfo.map((i) => i && <p>{i}</p>)}
@@ -110,28 +112,34 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
     text-align: left;
   }
 
+  .title {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.48rem;
+  }
+
   .info {
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
+    gap: 4rem;
     width: 100%;
     max-width: 680px;
   }
   .name {
-    font-size: 3rem;
+    letter-spacing: -0.01em;
+    font-size: 2.4rem;
+    font-weight: 500;
     line-height: 0.8;
-
-    margin: 0;
-    text-wrap: balance;
-    width: 100%;
+    color: var(--color-texto);
   }
   .labels h2 {
-    font-size: 3rem;
-    font-weight: 400;
-    line-height: 0.8;
-    letter-spacing: -2px;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 500;
+    color: var(--color-texto);
+    text-transform: uppercase;
     margin: 0;
-    text-wrap: balance;
   }
 
   span {
@@ -185,38 +193,54 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
     gap: 0.4rem;
   }
   footer a {
-    color: var(--color-terciario);
-    font-family: var(--font-secundaria);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--color-cuarto);
+    font-size: 0.8rem;
+    /* text-transform: uppercase; */
+    font-weight: 600;
     padding: 8px 24px;
-    border-radius: 16px;
+    border-radius: 12px;
+    border: 1px solid var(--color-borde);
+    color: var(--color-texto);
+    transition: all 0.3s ease;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   }
+
   footer a:hover {
-    color: var(--color-primario);
-    border: 1px solid var(--color-primario);
+    transform: scale(1.05);
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.164);
+    border: 1px solid var(--color-fondo);
   }
 
   footer .mail {
     background-color: var(--color-primario);
-    color: var(--color-secundario);
+    color: var(--color-fondo);
     border: 1px solid var(--color-primario);
     width: fit-content;
     padding: 8px 24px;
-    border-radius: 16px;
+    border-radius: 12px;
     display: block;
-    line-height: 1.2;
-    font-weight: 500;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.164);
+    font-weight: 600;
   }
   footer .mail:hover {
-    background-color: var(--color-secundario);
-    color: var(--color-primario);
-    border: 1px solid var(--color-secundario);
+    border: 1px solid var(--color-primario);
+    transform: scale(1.05);
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.164);
   }
 
-  @media (max-width: 460px) {
+  .dark .name {
+    color: var(--color-quinto);
+  }
+
+  .dark .labels h2 {
+    color: var(--color-quinto);
+  }
+
+  .dark footer a {
+    border: 1px solid var(--color-quinto);
+    color: var(--color-quinto);
+  }
+
+  @media (max-width: 600px) {
     .container {
       margin-top: 0;
       flex-direction: column-reverse;
@@ -269,7 +293,6 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
     }
     .name {
       font-size: 2.2rem;
-      font-weight: 600;
     }
     .labels h2 {
       font-size: 2rem;
@@ -279,10 +302,7 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
       opacity: 0.9;
     }
     footer a {
-      border: 1px solid var(--color-terciario);
-    }
-    span {
-      color: var(--color-quinto);
+      border: 1px solid var(--color-borde);
     }
   }
   @media screen and (max-width: 768px) {
