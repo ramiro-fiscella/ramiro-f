@@ -15,12 +15,14 @@ import Technologies from '../sections/Technologies.astro';
         collaborative agile teams and independent projects. I blend analytical
         thinking with creativity to craft functional, intuitive, and
         aesthetically refined digital products.
-        <br /><br />
-        My focus is on delivering high-quality, user-centered solutions while enjoying
-        the process.
-        <br /><br />
-        When I'm not designing or coding, you’ll likely find me playing guitar, reading,
-        or enjoying a great coffee, always exploring new ideas.
+      </p>
+      <p>
+        My focus is on delivering high-quality, user-centered solutions while
+        enjoying the process.
+      </p>
+      <p class="little-text">
+        When I'm not designing or coding, you’ll likely find me playing guitar,
+        reading, or enjoying a great coffee, always exploring new ideas.
       </p>
     </div>
   </div>
@@ -35,8 +37,9 @@ import Technologies from '../sections/Technologies.astro';
   }
 
   p {
-    font-size: 2rem;
+    font-size: 1.4rem;
     line-height: 1;
+    margin-bottom: 2rem;
     color: var(--color-texto);
   }
 
@@ -44,6 +47,10 @@ import Technologies from '../sections/Technologies.astro';
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  .little-text {
+    font-size: 1rem;
   }
 
   @media (max-width: 768px) {
