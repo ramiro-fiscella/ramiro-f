@@ -2,7 +2,7 @@
 
 :root {
   /* --color-primario: #fb521f; */
-  --color-primario: #ff4c24;
+  --color-primario: #ff7146;
   --color-primario-2: #ff6435;
   --color-secundario: #130f0e;
   --color-terciario: #948e8e;
@@ -22,10 +22,9 @@
 
   --color-boton: #000000; /* Negro en tema claro */
   --color-texto-boton: #ffffff; /* Texto blanco en tema claro */
-  --color-boton-hover: #333333;
-  --color-texto-boton-hover: #ffffff;
+  --color-sombra-boton-hover: #ff64356c;
 
-  --color-experiencia-fondo: #f8f8f8;
+  --color-experiencia-fondo: #f1f1f1;
   --color-experiencia-borde: rgba(0, 0, 0, 0.1);
   --color-experiencia-texto: #222;
 
@@ -33,19 +32,18 @@
 }
 
 html.dark {
-  --color-fondo: #222;
+  --color-fondo: #111;
   --color-texto: #eaeaea;
-  --color-borde: #333;
+  --color-borde: #444;
 
   --color-fondo-proyecto: #1c1817;
   --color-texto-proyecto: #eaeaea;
 
   --color-boton: #ffffff;
   --color-texto-boton: #000000;
-  --color-boton-hover: #eaeaea;
-  --color-texto-boton-hover: #000000;
+  --color-sombra-boton-hover: #ff4d1680;
 
-  --color-experiencia-fondo: var(--color-secundario);
+  --color-experiencia-fondo: #0b0b0b;
   --color-experiencia-borde: rgba(255, 255, 255, 0.1);
   --color-experiencia-texto: var(--color-quinto);
 
@@ -87,6 +85,7 @@ html:before {
 
 * {
   font-family: var(--font-primaria);
+  transition: all 0.8s ease;
 }
 *::-webkit-scrollbar {
   width: 0.4rem;
@@ -122,8 +121,8 @@ body {
 main {
   position: relative;
   margin: 0 auto;
-  width: 90%;
-  max-width: 80vw;
+  width: 100%;
+  max-width: 90vw;
 }
 
 a {
@@ -184,28 +183,6 @@ p {
   text-wrap: pretty;
 }
 
-.logo-text-1 {
-  color: var(--color-primario);
-  animation: ani1 4s infinite ease-in-out;
-}
-
-.logo-text-2 {
-  animation: ani2 4s infinite ease-in-out;
-  color: var(--color-cuarto);
-}
-
-.logo-text-3 {
-  animation: ani3 4s infinite ease-in-out;
-  color: var(--color-cuarto);
-}
-.nav-item {
-  color: var(--color-cuarto);
-  display: none;
-}
-.nav-item:hover {
-  color: var(--color-primario);
-}
-
 .asterisk {
   opacity: 12%;
 }
@@ -220,7 +197,7 @@ p {
   align-items: center;
   justify-content: center;
   font-size: 0.8rem;
-  padding: 8px 24px;
+  padding: 8px 12px;
   border-radius: 12px;
   border: 1px solid var(--color-borde);
   color: var(--color-terciario);
@@ -275,14 +252,6 @@ figure img {
 
 .dark ul {
   color: var(--color-terciario);
-}
-
-.dark .logo-text-2 {
-  color: var(--color-quinto);
-}
-
-.dark .logo-text-3 {
-  color: var(--color-quinto);
 }
 
 .dark .nav-item {

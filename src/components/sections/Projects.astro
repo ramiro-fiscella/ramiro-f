@@ -122,7 +122,7 @@ import { projects } from '@cv';
     padding: 8px 24px;
     border-radius: 12px;
     border: 1px solid var(--color-borde);
-    background-color: var(--color-texto);
+    background-color: var(--color-boton);
     color: var(--color-fondo);
     transition: all 0.3s ease;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -130,10 +130,8 @@ import { projects } from '@cv';
 
   a:hover,
   a:focus-visible {
-    background-color: var(--color-boton-hover);
-    color: var(--color-texto-boton-hover);
-    border: 1px solid var(--color-boton-hover);
-    transform: scale(1.05);
+    border: 1px solid var(--color-primario);
+    box-shadow: 0 2px 12px var(--color-sombra-boton-hover)
   }
 
   a:active {

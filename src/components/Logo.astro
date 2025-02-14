@@ -3,41 +3,54 @@
 ---
 
 <a href="#">
-    <div class="text-wrapper">
-      <div class="box logo-text-1">Ramiro <br> Fiscella</div>
-      <div class="box logo-text-2">Web <br> Developer</div>
-      <div class="box logo-text-3">UX/UI <br> Designer</div>
+  <div class="text-wrapper">
+    <div class="box logo-text-1">Ramiro <br /> Fiscella</div>
+    <!-- <div class="box logo-text-2">Web <br /> Developer</div>
+    <div class="box logo-text-3">UX/UI <br /> Designer</div> -->
   </div>
 </a>
 
 <style>
-
   .box {
     position: absolute;
-    opacity: 0;
+    /* opacity: 0; */
     top: 0;
     left: 0;
     width: fit-content;
     height: 100%;
 
     font-weight: 600;
-    font-size: .88rem;
+    font-size: 0.88rem;
     text-transform: uppercase;
-    line-height: .8;
+    line-height: 0.8;
     letter-spacing: 0.01rem;
-
   }
 
+  .logo-text-1 {
+    font-weight: 800;
+    color: var(--color-primario);
+    /* animation: ani1 4s infinite ease-in-out; */
+  }
 
+  .logo-text-2 {
+    animation: ani2 4s infinite ease-in-out;
+    color: var(--color-texto);
+  }
+
+  .logo-text-3 {
+    animation: ani3 4s infinite ease-in-out;
+    color: var(--color-texto);
+  }
+  /* 
   @keyframes ani1 {
     0% {
       opacity: 0;
     }
     .1% {
-      opacity: 1
+      opacity: 1;
     }
     39.9% {
-      opacity: 1
+      opacity: 1;
     }
     40% {
       opacity: 0;
@@ -49,10 +62,10 @@
       opacity: 0;
     }
     40.1% {
-      opacity: 1
+      opacity: 1;
     }
     69.9% {
-      opacity: 1
+      opacity: 1;
     }
     70% {
       opacity: 0;
@@ -64,13 +77,13 @@
       opacity: 0;
     }
     70.1% {
-      opacity: 1
+      opacity: 1;
     }
     99.9% {
-      opacity: 1
+      opacity: 1;
     }
     100% {
       opacity: 0;
     }
-  }
+  } */
 </style>
