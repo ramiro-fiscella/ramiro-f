@@ -32,7 +32,7 @@
 }
 
 html.dark {
-  --color-fondo: #111;
+  --color-fondo: #000;
   --color-texto: #eaeaea;
   --color-borde: #444;
 
@@ -43,7 +43,7 @@ html.dark {
   --color-texto-boton: #000000;
   --color-sombra-boton-hover: #ff4d1680;
 
-  --color-experiencia-fondo: #0b0b0b;
+  --color-experiencia-fondo: linear-gradient(0deg, #0b0b0b 0%, #00000000 100%);
   --color-experiencia-borde: rgba(255, 255, 255, 0.1);
   --color-experiencia-texto: var(--color-quinto);
 

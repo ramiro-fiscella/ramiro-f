@@ -86,13 +86,12 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
 <style>
   .container {
     position: relative;
-    margin-top: 8rem;
-    height: 16rem;
+    margin-top: 80px;
+    height: 72vh;    
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 3rem;
     text-align: left;
   }
 
@@ -106,7 +105,8 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
   .info {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    justify-content: space-between;
+    height: 100%;
     width: 100%;
     max-width: 680px;
   }
@@ -222,21 +222,7 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
   }
 
   @media (max-width: 600px) {
-    .container {
-      
-      flex-direction: column;
 
-      position: relative;
-      height: 72vh;
-    }
-    .info {
-      justify-content: space-between;
-      margin-top: 0px;
-      width: 100%;
-      height: 100%;
-      right: 1rem;
-      z-index: 10;
-    }
     figure {
       position: absolute;
       top: 0;
