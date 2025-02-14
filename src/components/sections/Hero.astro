@@ -40,9 +40,6 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
         </span>
       </div>
 
-      <div class="print">
-        {printInfo.map((i) => i && <p>{i}</p>)}
-      </div>
       <footer>
         {
           email && (
@@ -57,19 +54,6 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
             </a>
           )
         }
-
-        <!-- {
-          phone && (
-            <a
-              href={`tel:${phone}`}
-              title={`Llama por teléfono a ${name} al número ${phone}`}
-              target="_blank"
-              rel="noopener noreferer"
-            >
-              <Phone />
-            </a>
-          )
-        } -->
 
         {
           profiles.map(({ network, url }) => {
@@ -87,15 +71,15 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
         }
       </footer>
     </div>
-
-    <figure>
-      <p>
-        Design with purpose <br />
-        Think with empathy <br />
-        Enjoy the process
-      </p>
+    <p class="quote">
+      Design with purpose <br />
+      Think with empathy <br />
+      Enjoy the process
+    </p>
+    <!-- 
+        <figure>
       <img src={image} alt={name} />
-    </figure>
+    </figure> -->
   </div>
 </Section>
 
@@ -128,13 +112,13 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
   }
   .name {
     letter-spacing: -0.01em;
-    font-size: 2.4rem;
+    font-size: 2.8rem;
     font-weight: 500;
     line-height: 0.8;
     color: var(--color-texto);
   }
   .labels h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 1;
     font-weight: 500;
     color: var(--color-texto);
@@ -208,8 +192,7 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
     transform: scale(1.05);
     box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.164);
     border: 1px solid var(--color-fondo);
-    background-color: var(--color-texto);
-    color: var(--color-fondo);
+    /* background-color: var(--color-texto); */
   }
 
   footer .mail {

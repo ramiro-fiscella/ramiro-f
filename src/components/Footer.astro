@@ -1,32 +1,41 @@
 ---
 import { basics } from '@cv';
-
-
 ---
+
 <footer>
-    <div class="name-date">
-        <img src="/favicon.svg" alt="">
-        <p>{new Date().getFullYear()} {basics.name}</p>
-    </div>
+  <div class="name-date">
+    <img src="/favicon.svg" alt="" />
+    <p>{new Date().getFullYear()} {basics.name}</p>
+  </div>
 </footer>
 
 <style>
-    .name-date {
-        display: flex;
-        flex-direction: row;
-        gap: 0.5rem;
-        align-items:center;
-        justify-content: flex-start;
-    }
-    .name-date p {
-        font-family: "Space Grotesk", monospace;
-        text-transform: uppercase;
-        font-size: .7rem;
-        color: var(--color-primario);
-    }
-    img {
-        width: 1rem;
-        height: 1rem;
-        
-    }
+  footer {
+    height: 64vh;
+    width: 100%;
+
+    border-radius: 16px;
+
+    margin-bottom: 8rem;
+
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+  }
+  .name-date {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .name-date p {
+    font-family: 'Space Grotesk', monospace;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: var(--color-primario);
+  }
+  img {
+    width: 1rem;
+    height: 1rem;
+  }
 </style>
