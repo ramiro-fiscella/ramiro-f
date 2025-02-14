@@ -2,12 +2,14 @@
 import Section from '../Section.astro';
 
 import Technologies from '../sections/Technologies.astro';
+import Languages from '../sections/Languages.astro';
 ---
 
 <Section title="About me">
   <div class="about-container">
     <div class="about-technologies">
       <Technologies />
+      <Languages />
     </div>
     <div class="about-text">
       <p>
@@ -37,7 +39,7 @@ import Technologies from '../sections/Technologies.astro';
   }
 
   p {
-    font-size: 1.4rem;
+    font-size: 1.64rem;
     line-height: 1;
     margin-bottom: 2rem;
     color: var(--color-texto);
@@ -50,7 +52,8 @@ import Technologies from '../sections/Technologies.astro';
   }
 
   .little-text {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: 200;
   }
 
   @media (max-width: 768px) {
