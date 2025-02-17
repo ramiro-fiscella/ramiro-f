@@ -203,30 +203,31 @@
       "image": "/images/bumbum-app.png"
     },
     {
-      "name": "Cleric Sheets",
+      "name": "Atelier Ventura",
       "isActive": true,
-      "description": "Web app for creating, editing, and storing character sheets for the Dungeons & Dragons role-playing game.",
-      "tech": [
-        "React",
-        "TailwindCSS",
-        "Node.js",
-        "Express",
-        "PostgreSQL",
-        "Auth0",
-        "Cloudinary"
-      ],
-      "roles": ["Product Designer", "Fullstack Developer", "Web App"],
-      "url": "https://hojascleric.vercel.app/",
-      "image": "/images/cleric-sheets.png"
+      "description": "A website for an architecture atelier that designs structures in natural environments without disrupting nature. Developed as a study project in Webflow.",
+      "tech": ["Webflow", "HTML", "CSS", "JavaScript"],
+      "roles": ["Web Designer", "Front-end Developer"],
+      "url": "https://atelier-ventura.webflow.io/",
+      "image": "/images/atelier-ventura.png"
     },
     {
-      "name": "BUMBUM APP",
+      "name": "Memoranda",
       "isActive": true,
-      "description": "UX/UI research and design for a mobile party-finding app.",
-      "tech": ["Figma", "Slides", "Trello", "Notion", "Photoshop", "Whimsical"],
-      "roles": ["UX/UI Designer", "Prototyping", "Mobile App"],
-      "url": "https://www.behance.net/gallery/203048221/BUMBUM/modules/1152039929",
-      "image": "/images/bumbum-app.png"
+      "description": "A digital fanzine platform where users can share texts from friends, family, neighbors, or anyone interested.",
+      "tech": ["Next.js", "React", "Vercel", "CSS Modules"],
+      "roles": ["UX/UI Designer", "Content Curator"],
+      "url": "https://memoranda.vercel.app/",
+      "image": "/images/memoranda.png"
+    },
+    {
+      "name": "Hernan Fiscella Portfolio",
+      "isActive": true,
+      "description": "A photography portfolio website built on Webflow, showcasing high-quality visual storytelling.",
+      "tech": ["Webflow", "HTML", "CSS"],
+      "roles": ["Web Designer", "Visual Storyteller"],
+      "url": "https://hernan-fiscella.webflow.io/",
+      "image": "/images/photography-portfolio.png"
     }
   ],
   "interests": [
