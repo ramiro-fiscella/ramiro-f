@@ -17,7 +17,6 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
   <div class="name-date">
     <p>{new Date().getFullYear()} {basics.name}</p>
   </div>
-
   <div class="container">
     <h2>
       Open to new opportunities or side hustles, feel free to get in touch!
@@ -29,7 +28,7 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
       <a
         class="mail"
         href={`mailto:${email}`}
-        title={`Enviar correo electrónico a ${name} al correo ${email}`}
+        title={`Send email to ${name} at ${email}`}
         target="_blank"
         rel="noopener noreferer"
       >
@@ -41,37 +40,76 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
 
 <style>
   footer {
-    height: 64vh;
-    width: 100%;
-    padding: 1rem;
+    width: 90vw;
+    max-width: 1024px;
+    margin: 0 auto 4rem auto;
+    padding: 2rem;
     border-radius: 16px;
-
-    margin-bottom: 8rem;
-
     background-color: var(--color-primario);
     color: var(--color-fondo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
   .name-date {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    align-items: center;
-    justify-content: flex-start;
+    margin-bottom: 1rem;
   }
   .name-date p {
-    font-family: 'Space Grotesk', monospace;
+    font-family: var(--font-secundaria);
+    font-size: 0.8rem;
     text-transform: uppercase;
-    font-size: 0.7rem;
-    margin-top: 0.5rem;
-    margin-bottom: 4rem;
-    color: var(--color-secundario);
+    letter-spacing: 0.1rem;
+    margin: 0;
+    color: var(--color-fondo);
+  }
+  .container {
+    margin-bottom: 2rem;
+  }
+  .container h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    color: var(--color-fondo);
+    line-height: 1.2;
+  }
+  .container h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+    color: var(--color-fondo);
+  }
+  .mail {
+    display: inline-block;
+    background-color: var(--color-fondo);
+    color: var(--color-primario);
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition:
+      background 0.3s ease,
+      transform 0.3s ease;
+  }
+  .mail:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
   }
 
-  .container h2,
-  .container h3 {
-    margin: 0;
-
-    font-weight: 600;
-    color: var(--color-secundario);
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .container h2 {
+      font-size: 1.8rem;
+    }
+    .container h3 {
+      font-size: 1.3rem;
+    }
+    .mail {
+      padding: 0.75rem 1.2rem;
+      font-size: 0.9rem;
+    }
   }
 </style>

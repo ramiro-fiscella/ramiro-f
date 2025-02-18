@@ -89,9 +89,11 @@ import { work } from '@cv';
   }
 
   .date {
-    font-size: 0.85rem;
+    font-size: 0.72rem;
     opacity: 0.75;
     color: var(--color-terciario);
+    text-transform: uppercase;
+    font-family: var(--font-secundaria);
   }
 
   .position {
@@ -108,10 +110,11 @@ import { work } from '@cv';
 
   .read-more {
     align-self: flex-start;
-    color: var(--color-texto); /* Color del enlace */
+    color: var(--color-primario);
     text-decoration: none;
     transition: border-bottom 0.2s ease;
-    border-bottom: 1px solid var(--color-texto); /* Cambio de color en hover */
+    text-decoration: underline;
+    text-underline-offset: 0.4rem;
   }
 
   .read-more:hover {

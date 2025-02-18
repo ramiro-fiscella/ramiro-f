@@ -114,7 +114,7 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
     align-items: baseline;
   }
   .name {
-    letter-spacing: -0.01em;
+    letter-spacing: -0.12rem;
     font-size: 4rem;
     font-weight: 400;
     line-height: 0.8;
@@ -150,6 +150,8 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
     word-break: keep-all;
     white-space: nowrap;
     color: var(--color-terciario);
+    line-height: 1.4;
+    font-family: var(--font-secundaria);
   }
   /* 
   figure {
@@ -198,18 +200,19 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
 
   .social {
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 400;
     padding: 8px 24px;
     border-radius: 12px;
-    border: 1px solid var(--color-borde);
-    color: var(--color-texto);
+    border: 1px solid var(--color-primario);
+    color: var(--color-primario);
     transition: all 0.3s ease;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   .social:hover,
   .social:focus-visible {
-    border: 1px solid var(--color-primario);
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
     box-shadow: 0 2px 12px var(--color-sombra-boton-hover);
   }
 
@@ -219,7 +222,7 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
     border: 1px solid var(--color-primario);
     width: 100%;
     padding: 24px;
-    border-radius: 12px;
+    border-radius: 16px;
     display: block;
     box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.164);
     font-size: 1.4rem;
@@ -228,7 +231,7 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
   }
 
   .mail:hover {
-    border: 1px solid var(--color-primario);
+    background-color: var(--color-texto);
     box-shadow: 0 8px 28px var(--color-sombra-boton-hover);
   }
 
@@ -290,8 +293,7 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
       opacity: 0.9;
     }
     .social {
-      border: 1px solid var(--color-borde);
-      padding: 12px 16px;
+      padding: 24px;
       height: 48px;
       width: 100%;
     }
@@ -310,10 +312,14 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
       width: 90vw;
     }
     .name {
-      font-size: 2.4rem;
+      font-size: 3.2rem;
     }
     .labels h2 {
-      font-size: 1.64rem;
+      font-size: 2rem;
+    }
+    span {
+      font-size: 0.8rem;
+      padding-top: 0.4rem;
     }
 
     .quote {

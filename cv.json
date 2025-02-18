@@ -167,14 +167,7 @@
     { "name": "Restful API" },
     { "name": "Git" }
   ],
-  "languages": [
-    {
-      "language": "Spanish"
-    },
-    {
-      "language": "English"
-    }
-  ],
+  "languages": [{ "language": "Spanish" }, { "language": "English" }],
   "projects": [
     {
       "name": "Cleric Sheets",
@@ -219,29 +212,12 @@
       "roles": ["UX/UI Designer", "Content Curator"],
       "url": "https://memoranda.vercel.app/",
       "image": "/images/memoranda.png"
-    },
-    {
-      "name": "Hernan Fiscella Portfolio",
-      "isActive": true,
-      "description": "A photography portfolio website built on Webflow, showcasing high-quality visual storytelling.",
-      "tech": ["Webflow", "HTML", "CSS"],
-      "roles": ["Web Designer", "Visual Storyteller"],
-      "url": "https://hernan-fiscella.webflow.io/",
-      "image": "/images/photography-portfolio.png"
     }
   ],
   "interests": [
-    {
-      "name": "Reading"
-    },
-    {
-      "name": "Composing"
-    },
-    {
-      "name": "Swimming"
-    },
-    {
-      "name": "Traveling"
-    }
+    { "name": "Reading" },
+    { "name": "Composing" },
+    { "name": "Swimming" },
+    { "name": "Traveling" }
   ]
 }

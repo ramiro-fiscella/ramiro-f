@@ -20,7 +20,11 @@ import { education } from '@cv';
                 <h4>{area}</h4>
                 <footer>
                   <p>
-                    {studyType} <span>| {duration}</span>
+                    {studyType}{' '}
+                    <>
+                      <br />
+                      <span>| {duration}</span>
+                    </>
                   </p>
                 </footer>
               </article>
@@ -91,7 +95,6 @@ import { education } from '@cv';
   }
 
   footer p {
-    font-size: 0.85rem;
     color: var(--color-texto);
 
     text-wrap: pretty;
