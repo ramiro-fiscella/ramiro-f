@@ -3,7 +3,9 @@ import Section from '../Section.astro';
 import { education } from '@cv';
 ---
 
-<Section title="Certifications">
+<Section>
+  <h2 class="subtitle">Certificates</h2>
+
   <ul>
     {
       education.map(
@@ -42,7 +44,7 @@ import { education } from '@cv';
     background: var(--color-fondo);
     border: 1px solid var(--color-borde);
     border-radius: 8px;
-    color: var(--color-texto-proyecto);
+    color: var(--color-terciario);
     transition: all 0.3s ease;
   }
 
@@ -74,13 +76,15 @@ import { education } from '@cv';
     font-weight: 600;
     color: var(--color-texto);
     text-wrap: balance;
+    margin-bottom: 0;
   }
 
   h4 {
+    margin-top: 0;
     font-size: 0.95rem;
     font-weight: 500;
+    font-family: 'Space Grotesk', monospace;
     text-transform: uppercase;
-    color: var(--color-terciario);
   }
 
   header {

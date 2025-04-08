@@ -3,10 +3,11 @@
     "name": "Ramiro Fiscella",
     "label1": "Fullstack Developer",
     "label2": "UX/UI Designer",
-    "image": "/hero-img.jpg",
+    "image": "/profile-2.jpg",
     "email": "ramirofiscella@gmail.com",
     "phone": "+54 2281 349346",
     "url": "https://ramirof.vercel.app",
+    "resume": "/RamiroFiscella_Resume_EN.pdf",
     "summary": "I’m a UX/UI Designer and Fullstack Developer with experience in both collaborative agile teams and independent projects. I blend analytical thinking with creativity to craft functional, intuitive, and aesthetically refined digital products. My focus is on delivering high-quality, user-centered solutions while enjoying the process. When I'm not designing or coding, you’ll likely find me playing guitar, reading, or enjoying a great coffee, always exploring new ideas.",
     "location": {
       "address": "",
@@ -17,6 +18,11 @@
     },
     "profiles": [
       {
+        "network": "Behance",
+        "username": "ramiro-fiscella",
+        "url": "https://behance.net/ramiro-fiscella"
+      },
+      {
         "network": "GitHub",
         "username": "ramiro-fiscella",
         "url": "https://github.com/ramiro-fiscella"
@@ -25,11 +31,6 @@
         "network": "LinkedIn",
         "username": "ramiro-fiscella",
         "url": "https://linkedin.com/in/ramiro-fiscella"
-      },
-      {
-        "network": "Behance",
-        "username": "ramiro-fiscella",
-        "url": "https://behance.net/ramiro-fiscella"
       }
     ]
   },
@@ -74,7 +75,8 @@
       "studyType": "Codo a Codo 4.0 Development Program - UX/UI Design.",
       "duration": "198 hours",
       "startDate": "02/2024",
-      "endDate": "06/2024"
+      "endDate": "06/2024",
+      "url": "https://drive.google.com/file/d/1eR3uAbUhdtYbvd00huJAu6tVeFzwTsC_/view?usp=sharing"
     },
     {
       "institution": "Soy Henry",
@@ -82,7 +84,8 @@
       "studyType": "Fullstack Web Development Bootcamp.",
       "duration": "+800 hours",
       "startDate": "06/2023",
-      "endDate": "10/2023"
+      "endDate": "10/2023",
+      "url": "https://drive.google.com/file/d/140KqMxEGXF07deEG_poyZEUyu5HXYcto/view?usp=sharing"
     },
     {
       "institution": "INTI",
@@ -90,7 +93,8 @@
       "studyType": "Web Development Bootcamp (#ArgentinaPrograma) by INTI (National Institute of Industrial Technology) under the Ministry of Economy of Argentina.",
       "duration": "60 hours",
       "startDate": "05/2022",
-      "endDate": "09/2022"
+      "endDate": "09/2022",
+      "url": "https://drive.google.com/file/d/14-AnVtU5IymXD4MPjm4XY5UyKyTcQNL9/view?usp=sharing"
     },
     {
       "institution": "FreeCodeCamp",
@@ -98,7 +102,8 @@
       "studyType": "Web Development Bootcamp by freeCodeCamp.",
       "duration": "300 hours",
       "startDate": "02/2022",
-      "endDate": "06/2022"
+      "endDate": "06/2022",
+      "url": "https://www.freecodecamp.org/certification/kaliv/responsive-web-design"
     },
     {
       "institution": "UES21",
@@ -110,29 +115,6 @@
     }
   ],
   "certificates": [
-    {
-      "name": "Codo a Codo 4.0 - UX/UI Design",
-      "date": "29/06/2024",
-      "url": "https://drive.google.com/file/d/1eR3uAbUhdtYbvd00huJAu6tVeFzwTsC_/view?usp=sharing"
-    },
-    {
-      "name": "Full Stack Development",
-      "date": "30/09/2023",
-      "issuer": "Soy Henry",
-      "url": "https://drive.google.com/file/d/140KqMxEGXF07deEG_poyZEUyu5HXYcto/view?usp=sharing"
-    },
-    {
-      "name": "Argentina Programa - Web Development",
-      "date": "12/09/2022",
-      "issuer": "INTI",
-      "url": "https://drive.google.com/file/d/14-AnVtU5IymXD4MPjm4XY5UyKyTcQNL9/view?usp=sharing"
-    },
-    {
-      "name": "Responsive Web Design",
-      "date": "26/01/2022",
-      "issuer": "FreeCodeCamp",
-      "url": "https://www.freecodecamp.org/certification/kaliv/responsive-web-design"
-    },
     {
       "name": "English Certificate C2 Proficient (74/100)",
       "date": "02/08/2023",
@@ -203,15 +185,6 @@
       "image": "/images/bumbum-app.png"
     },
     {
-      "name": "Atelier Ventura",
-      "isActive": true,
-      "description": "A website for an architecture atelier that designs structures in natural environments without disrupting nature. Developed as a study project in Webflow.",
-      "tech": ["Webflow", "HTML", "CSS", "JavaScript"],
-      "roles": ["Web Designer", "Front-end Developer"],
-      "url": "https://atelier-ventura.webflow.io/",
-      "image": "/images/atelier-ventura.png"
-    },
-    {
       "name": "Memoranda",
       "isActive": true,
       "description": "A digital fanzine platform where users can share texts from friends, family, neighbors, or anyone interested.",
@@ -219,15 +192,6 @@
       "roles": ["UX/UI Designer", "Content Curator"],
       "url": "https://memoranda.vercel.app/",
       "image": "/images/memoranda.png"
-    },
-    {
-      "name": "Hernan Fiscella Portfolio",
-      "isActive": true,
-      "description": "A photography portfolio website built on Webflow, showcasing high-quality visual storytelling.",
-      "tech": ["Webflow", "HTML", "CSS"],
-      "roles": ["Web Designer", "Visual Storyteller"],
-      "url": "https://hernan-fiscella.webflow.io/",
-      "image": "/images/photography-portfolio.png"
     }
   ],
   "interests": [

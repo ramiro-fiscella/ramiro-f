@@ -2,8 +2,9 @@
 import { basics } from '@cv';
 import Section from '@/components/Section.astro';
 import WorldMap from '@/icons/WorldMap.astro';
+import NavBar from '../NavBar.astro';
 
-const { name, label1, label2, image, location, profiles, email } = basics;
+const { name, label1, label2, location, profiles, email, resume } = basics;
 const { city, region } = location;
 
 const linkedInfo = profiles.find((p) => p.network === 'LinkedIn');
@@ -17,19 +18,14 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
 
 <Section>
   <div class="container">
+    <NavBar />
     <div class="info">
       <div class="title">
-        <h1 class="name">
-          Hello, I'm
-          <br />
-          {name}
-        </h1>
-
         <div class="labels">
           <h2>
-            A {label1}
+            {label1}
             <br />
-            &
+            &amp;
             {label2} with <br />
             +2 years experience
           </h2>
@@ -45,20 +41,20 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
         </p>
       </div>
       <footer>
-        {
-          email && (
-            <a
-              class="mail"
-              href={`mailto:${email}`}
-              title={`Enviar correo electrónico a ${name} al correo ${email}`}
-              target="_blank"
-              rel="noopener noreferer"
-            >
-              Contact
-            </a>
-          )
-        }
         <div class="social-flex">
+          {
+            resume && (
+              <a
+                class="resume"
+                href={resume}
+                title={`Descargar CV de ${name}`}
+                target="_blank"
+                rel="noopener noreferer"
+              >
+                Resume
+              </a>
+            )
+          }
           {
             profiles.map(({ network, url }) => {
               return (
@@ -77,275 +73,184 @@ const printInfo = [email, LinkedUrl, gitHubUrl];
         </div>
       </footer>
     </div>
-
-    <!-- <figure>
-      <img src={image} alt={name} />
-    </figure> -->
   </div>
 </Section>
 
 <style>
   .container {
-    position: relative;
-    margin-top: 80px;
-
+    position: fixed;
+    background-color: var(--color-fondo);
+    padding: 64px 2px 140px 0;
+    gap: 1rem;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     text-align: left;
+    z-index: 100;
+    height: 100vh;
   }
 
   .title {
-    margin-top: 8rem;
     display: flex;
     flex-direction: column;
-    gap: 0.48rem;
+    gap: 0.8rem;
+    min-width: 240px;
+    color: var(--color-texto);
   }
 
   .info {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    width: 100vw;
-    max-width: 1024px;
-    gap: 1rem;
-    align-items: baseline;
+    align-items: start;
   }
-  .name {
-    letter-spacing: -0.01em;
-    font-size: 4rem;
-    font-weight: 400;
-    line-height: 0.8;
-    color: var(--color-texto);
-  }
+
   .labels h2 {
-    line-height: 1;
-    font-size: 2.4rem;
-    font-weight: 400;
-    color: var(--color-primario);
-    /* text-transform: uppercase; */
+    font-size: 1.4rem;
+    font-weight: 500;
     margin: 0;
+    line-height: 1;
   }
 
   span {
-    color: var(--color-terciario);
-    font-size: 1rem;
+    color: var(--color-cuarto);
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.01rem;
-    font-weight: 500;
+    font-weight: 400;
     margin: 0;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     gap: 0.4rem;
   }
 
   .quote {
-    margin-top: 2rem;
-    /* align-self: flex-end; */
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 400;
+    letter-spacing: 0.04rem;
     word-break: keep-all;
     white-space: nowrap;
-    color: var(--color-terciario);
+    color: var(--color-texto);
+    margin-top: 0;
   }
-  /* 
-  figure {
-    position: absolute;
-    right: -8rem;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-start;
-    gap: 0.4rem;
-
-    height: 16rem;
-    margin: 0;
-  }
-  figure p {
-    color: var(--color-terciario);
-    font-size: 0.6rem;
-    text-transform: uppercase;
-    letter-spacing: 0.01rem;
-    line-height: 1.4;
-    font-weight: 500;
-    text-align: right;
-    margin: 0;
-  }
-
-  figure img {
-    height: 90%;
-    border-radius: 16px;
-
-    object-fit: cover;
-  } */
 
   footer {
+    display: flex;
     flex-direction: column;
     align-items: start;
-    display: flex;
-    gap: 1rem;
+    gap: 0.4rem;
   }
 
   .social-flex {
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    gap: 0.4rem;
+    width: 80px;
+    margin-top: 2rem;
   }
 
-  .social {
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 8px 24px;
-    border-radius: 12px;
-    border: 1px solid var(--color-borde);
-    color: var(--color-texto);
+  .social,
+  .resume {
+    font-family: 'Space Grotesk', monospace;
     transition: all 0.3s ease;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--color-texto);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.01rem;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    position: relative;
+    justify-content: center;
+  }
+
+  .resume {
+    color: var(--color-primario);
+  }
+
+  .social::after,
+  .resume::after {
+    content: '↗';
+    font-size: 1rem;
+    opacity: 0;
+    transform: translateY(5px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--color-texto);
+  }
+
+  .resume::after {
+    color: var(--color-primario);
+  }
+
+  .social:hover::after,
+  .social:focus-visible::after,
+  .resume:hover::after,
+  .resume:focus-visible::after {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.05s;
   }
 
   .social:hover,
-  .social:focus-visible {
-    border: 1px solid var(--color-primario);
-    box-shadow: 0 2px 12px var(--color-sombra-boton-hover);
+  .social:focus-visible,
+  .resume:hover,
+  .resume:focus-visible {
+    transform: translateX(2px);
   }
 
-  .mail {
-    background-color: var(--color-primario);
-    color: var(--color-fondo);
-    border: 1px solid var(--color-primario);
-    width: 100%;
-    padding: 24px;
-    border-radius: 12px;
-    display: block;
-    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.164);
-    font-size: 1.4rem;
-    letter-spacing: 0.1rem;
-    font-weight: 400;
-  }
-
-  .mail:hover {
-    border: 1px solid var(--color-primario);
-    box-shadow: 0 8px 28px var(--color-sombra-boton-hover);
-  }
-
-  @media (max-width: 1024px) {
+  @media (max-width: 760px) {
     .container {
-      width: 90vw;
-    }
-    .info {
-      width: auto;
-      flex-direction: column;
-      height: 84vh;
-    }
-    .title {
-      margin-top: 2rem;
-    }
-
-    .quote {
-      font-size: 0.8rem;
-    }
-    figure {
-      position: absolute;
-      top: 0;
-      left: -1rem;
-      right: -1rem;
-      height: 72vh;
-      flex-direction: column;
-    }
-    figure p {
-      position: absolute;
-      bottom: 1rem;
-      left: 1rem;
-      z-index: 10;
-      text-align: left;
-    }
-    figure img {
-      height: 100%;
-      width: 100%;
-
-      border-radius: 0;
-    }
-    figure::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-        0deg,
-        #121212 0%,
-        #12121249 36%,
-        #12121200 100%
-      );
-      z-index: 1;
-      border-radius: 8px;
-    }
-
-    p {
-      opacity: 0.9;
-    }
-    .social {
-      border: 1px solid var(--color-borde);
-      padding: 12px 16px;
-      height: 48px;
-      width: 100%;
-    }
-    .social-flex {
-      flex-direction: column;
-      width: 100%;
-      gap: 0.8rem;
-    }
-    footer {
-      width: 100%;
-    }
-  }
-
-  @media (max-width: 450px) {
-    .info {
-      width: 90vw;
-    }
-    .name {
-      font-size: 2.4rem;
-    }
-    .labels h2 {
-      font-size: 1.64rem;
-    }
-
-    .quote {
-      margin-top: 1rem;
-    }
-
-    footer {
-      flex-direction: column;
-      gap: 0.8rem;
-    }
-
-    .social,
-    .mail {
-      width: 100%;
+      position: relative;
+      gap: 1rem;
       display: flex;
+      flex-direction: row;
       align-items: center;
+      justify-content: center;
+      text-align: left;
+      z-index: 100;
+      height: 40vh;
+      width: 90vw;
+      max-width: 720px;
+    }
+
+    .info {
+      flex-direction: row;
+      align-items: start;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .social-flex {
+      margin-top: 0;
     }
   }
 
-  @media print {
-    *,
-    h1,
-    h2,
-    h3,
-    h4,
-    p,
-    span {
-      color: black;
-      background: white;
+  @media (max-width: 400px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+      z-index: 100;
+      height: 60vh;
+      width: 90vw;
+      padding-bottom: 1rem;
+      max-width: 720px;
     }
-    footer {
-      display: none;
+
+    .info {
+      flex-direction: column;
+      align-items: start;
+      justify-content: space-between;
+      width: 100%;
     }
   }
+
+  /* Resto de tus estilos responsivos u otros ajustes */
 </style>

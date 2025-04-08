@@ -3,11 +3,13 @@ const { title } = Astro.props;
 ---
 
 <section>
-  {title && <h2>{title}</h2>}
   <slot />
 </section>
 
 <style>
+  section {
+    width: 100%;
+  }
   h2 {
     text-align: center;
     margin-bottom: 4rem;

@@ -16,7 +16,10 @@
   #themeToggle img {
     width: 24px;
     height: 24px;
-    transition: opacity 0.3s ease;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      filter 0.3s ease;
   }
   /* Por defecto (modo claro): se muestra la imagen 'sun' y se oculta 'moon' */
   #themeToggle .sun {
@@ -31,6 +34,10 @@
   }
   html.dark #themeToggle .moon {
     display: block;
+  }
+  /* Hover effect: agrega drop-shadow y aumenta la escala del icono */
+  #themeToggle:hover img {
+    filter: drop-shadow(0 0 4px var(--color-primario));
   }
 </style>
 

@@ -1,168 +1,180 @@
 ---
 import Section from '../Section.astro';
-
 import { projects } from '@cv';
 ---
 
-<Section title="Projects">
+<Section>
+  <h2 class="subtitle">Projects</h2>
   <ul class="projects">
-    {
-      projects.map(({ name, description, roles, url, image }) => (
-        <li class="project">
+    {projects.map(({ name, description, roles, url, image }) => (
+      <li class="project">
+        <a href={url} target="_blank" rel="noopener noreferer">
+          <!-- Imagen de fondo -->
           <img src={image} alt={name} class="project-image" />
+
+          <!-- Capa fija: Título sobre la imagen -->
+          <div class="overlay-title">
+            <h3>{name}</h3>
+          </div>
+
+          <!-- Capa hover: Información adicional con efecto glassmorphism -->
           <article class="data">
-            <header>
-              <h3>{name}</h3>
-              <p>{description}</p>
-            </header>
+            <p>{description}</p>
             <footer class="project-footer">
               <ul class="roles">
-                {roles.map((roles) => (
+                {roles.map((role) => (
                   <li>
-                    <span class="tag">{roles}</span>
+                    <span class="tag">{role}</span>
                   </li>
                 ))}
               </ul>
             </footer>
-            <a href={url} target="_blank" rel="noopener noreferer">
-              Demo
-            </a>
+
+            <h3 class="project-name">{name}</h3>
           </article>
-        </li>
-      ))
-    }
+        </a>
+      </li>
+    ))}
   </ul>
 </Section>
 
 <style>
-  .data {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: .64rem;
-    width: 100%;
-    height: 100%;
-    padding: 1rem 0;
+  /* Contenedor de proyectos */
+  h2.subtitle {
+    margin-top: 0;
   }
   .projects {
-    columns: 3;
-    column-width: 20rem;
-    /* column-rule: 1px solid rgba(255, 255, 255, 0.2); */
-
-    column-gap: 1rem;
-    padding: 0;
-  }
-
-  .project {
     width: 100%;
-    height: webkit-fill-available;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    border-radius: 12px;
-
-    background: var(--color-fondo);
-    color: var(--color-texto-proyecto);
-    /* border: 1px solid var(--color-borde); */
-
-    transition: all 0.3s ease;
-    break-inside: avoid;
-    margin-bottom: 4rem;
-  }
-  .project h3,
-  .project p,
-  .project-footer {
-    color: var(--color-texto-proyecto);
-  }
-  h3 {
-    text-wrap: balance;
-    font-size: 1rem;
-    margin-bottom: 0;
-    /* color: var(--color-quinto); */
+    display: flex;    
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding: 0;
+    list-style: none;
   }
 
-  p {
-    font-size: 0.85rem;
-    opacity: 0.9;
-    margin-top: 0.4rem;
-    }
-
-  /* .project:hover {
-    border-color: var(--color-fondo);
-    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.164);
-  } */
-
-  .project-image {
+  /* Cada proyecto se posiciona de forma relativa para ubicar los overlays */
+  .project {
     position: relative;
-    top: 0;
+    width: 49%;
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--color-fondo);
+    transition: all 0.3s ease;
+  }
+
+  /* Aseguramos que el enlace ocupa toda la card */
+  .project a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .project-name {
+    position: absolute;
+    bottom:  0;
     left: 0;
-    right: 0;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Imagen de fondo */
+  .project-image {
     width: 100%;
     height: 280px;
     object-fit: cover;
-    border-radius: 12px;
-
-    background-color: var(--color-primario);
+    display: block;
   }
 
-  .roles {
+  /* Capa fija: Título */
+  .overlay-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease;
+  }
+
+  .overlay-title h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.1rem;
+  }
+
+  /* Capa hover: Overlay glassmorphism */
+  .data {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #00000064;
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    padding: 1rem;
     display: flex;
-    list-style: none;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-  }
-
-  .tag {
-    font-size: 0.76rem;
-    padding: 6px 12px;
-  }
-  a {
-    font-size: 0.8rem;
-    /* text-transform: uppercase; */
-    font-weight: 600;
-    padding: 8px 24px;
-    border-radius: 12px;
-    border: 1px solid var(--color-borde);
-    background-color: var(--color-boton);
+    flex-direction: column;
+    justify-content: end;
     color: var(--color-fondo);
-    transition: all 0.3s ease;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   }
 
-  a:hover,
-  a:focus-visible {
-    border: 1px solid var(--color-primario);
-    box-shadow: 0 2px 12px var(--color-sombra-boton-hover)
+  /* Al hacer hover se muestra la capa data y se oculta la capa de título */
+  .project:hover .data {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .project:hover .overlay-title {
+    opacity: 0;
   }
 
-  a:active {
-    transform: scale(0.98);
-    box-shadow: 0 3px 8px rgba(255, 255, 255, 0.15);
+  /* Estilos dentro de la capa hover */
+  .data p {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    line-height: 1.2;
+    margin: 0;
+    color: var(--color-white);
+    text-shadow: 1px 1px 4px rgb(0, 0, 0);
   }
 
   .project-footer {
-    border: none;
-
-    margin-top: 1%;
+    margin-top: 0.5rem;
+  }
+  .roles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding: 0;
+    list-style: none;
   }
 
-  .project-footer p {
-    margin: 0.4rem 0;
+  .tag {
+    font-size: 0.6rem;
+    background-color: var(--color-primario-2);
+    color: var(--color-white);
   }
-
-  @media (max-width: 768px) {
+  
+  footer {
+    margin-bottom: 1.8rem;
+  }
+  @media (max-width: 920px) {
     .projects {
-      columns: 1;
+      width: 100%;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      margin: auto;
     }
-
-    .data {
-      padding-inline: 0;
-      margin-bottom: 2rem;;
-      border-bottom: 1px solid var(--color-borde);
+    /* Aquí cambiamos el ancho al 100% para dispositivos tablet o menores */
+    .project {
+      width: 100%;
+    }
   }
 </style>

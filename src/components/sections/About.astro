@@ -1,31 +1,36 @@
 ---
 import Section from '../Section.astro';
 
+import { basics } from '@cv';
 import Technologies from '../sections/Technologies.astro';
 import Languages from '../sections/Languages.astro';
 ---
 
-<Section title="About me">
+<Section>
+  <h2 class="subtitle">About</h2>
   <div class="about-container">
+    <div class="about-text">
+      <!-- {basics.image && <img src={basics.image} alt="profile" />} -->
+      <p>
+        I've been designing since I was 16, starting with prints, flyers, and
+        social media ads for local bands and business. Working in agile,
+        international teams, I use tools like Figma, Adobe Suite, VSC, and
+        Notion, and develop sites using mainly React (PERN stack) or Astro and
+        Tailwind. I'm Argentine with European citizenship, which makes it easier
+        to connect with teams worldwide.
+      </p>
+      <p class="little-text">
+        I love collaborating and creating digital experiences that make things
+        easier for both users and clients.
+      </p>
+      <!-- <p class="little-text">
+        When I'm not designing or coding, you’ll likely find me playing guitar,
+        reading, or enjoying a great coffee, always exploring new ideas.
+      </p> -->
+    </div>
     <div class="about-technologies">
       <Technologies />
       <Languages />
-    </div>
-    <div class="about-text">
-      <p>
-        I’m a UX/UI Designer and Fullstack Developer with experience in both
-        collaborative agile teams and independent projects. I blend analytical
-        thinking with creativity to craft functional, intuitive, and
-        aesthetically refined digital products.
-      </p>
-      <p>
-        My focus is on delivering high-quality, user-centered solutions while
-        enjoying the process.
-      </p>
-      <p class="little-text">
-        When I'm not designing or coding, you’ll likely find me playing guitar,
-        reading, or enjoying a great coffee, always exploring new ideas.
-      </p>
     </div>
   </div>
 </Section>
@@ -52,11 +57,20 @@ import Languages from '../sections/Languages.astro';
   }
 
   .little-text {
-    font-size: 1.2rem;
-    font-weight: 200;
+    font-size: 1.24rem;
+    font-weight: 400;
+    color: var(--color-cuarto);
   }
 
-  @media (max-width: 768px) {
+  img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 920px) {
     .about-container {
       grid-template-columns: 1fr;
       gap: 4rem;
@@ -64,7 +78,7 @@ import Languages from '../sections/Languages.astro';
 
     p {
       font-size: 1.4rem;
-      line-height: 1.5;
+      line-height: 1.2;
     }
   }
 </style>

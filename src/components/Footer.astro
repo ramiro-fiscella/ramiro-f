@@ -1,77 +1,131 @@
 ---
+// Frontmatter: aquí puedes importar datos y preparar variables, pero no usar APIs del navegador.
 import { basics } from '@cv';
 
-const { name, label1, label2, image, location, profiles, email } = basics;
-const { city, region } = location;
-
-const linkedInfo = profiles.find((p) => p.network === 'LinkedIn');
-const LinkedUrl = linkedInfo?.url;
-
-const githubInfo = profiles.find((p) => p.network === 'GitHub');
-const gitHubUrl = githubInfo?.url;
-
-const printInfo = [email, LinkedUrl, gitHubUrl];
+const { name, email, resume } = basics;
 ---
 
 <footer>
   <div class="name-date">
-    <p>{new Date().getFullYear()} {basics.name}</p>
+    <!-- Se muestra la fecha y hora en tiempo real, inicializada en el servidor pero que se actualizará en el cliente -->
+    <p id="clock">{new Date().toLocaleString()}</p>
   </div>
 
   <div class="container">
     <h2>
-      Open to new opportunities or side hustles, feel free to get in touch!
+      Open to new opportunities or side hustles, feel free to get in touch. ✌️
     </h2>
-    <h3>ramirofiscella@gmail.com</h3>
   </div>
-  {
-    email && (
-      <a
-        class="mail"
-        href={`mailto:${email}`}
-        title={`Enviar correo electrónico a ${name} al correo ${email}`}
-        target="_blank"
-        rel="noopener noreferer"
-      >
-        Contact
-      </a>
-    )
-  }
+  <div class="butons-container">
+    {
+      email && (
+        <a
+          class="mail"
+          href={`mailto:${email}`}
+          title={`Enviar correo electrónico a ${name} al correo ${email}`}
+          target="_blank"
+          rel="noopener noreferer"
+        >
+          Contact
+        </a>
+      )
+    }
+    {
+      resume && (
+        <a
+          class="resume"
+          href={resume}
+          title={`Descargar CV de ${name}`}
+          target="_blank"
+          rel="noopener noreferer"
+        >
+          Resume
+        </a>
+      )
+    }
+    <a href="#" class="top" id="backToTop">Back to top</a>
+  </div>
 </footer>
 
+<!-- Script que se ejecuta en el cliente, siguiendo el patrón de Astro Islands (como en la receta de Reading Time) -->
+<script>
+  function updateClock() {
+    const now = new Date();
+    const formatted = now.toLocaleString();
+    const clockEl = document.getElementById('clock');
+    if (clockEl) {
+      clockEl.innerText = formatted;
+    }
+  }
+  updateClock();
+  setInterval(updateClock, 1000);
+</script>
+
 <style>
+  html {
+    scroll-behavior: smooth;
+  }
   footer {
-    height: 64vh;
-    width: 100%;
-    padding: 1rem;
-    border-radius: 16px;
-
-    margin-bottom: 8rem;
-
-    background-color: var(--color-primario);
-    color: var(--color-fondo);
-  }
-  .name-date {
+    position: relative;
+    padding: 4rem 1rem 4.6rem;
+    background: var(--color-fondo);
+    height: 90vh;
     display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    align-items: center;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
   }
+
   .name-date p {
     font-family: 'Space Grotesk', monospace;
     text-transform: uppercase;
-    font-size: 0.7rem;
-    margin-top: 0.5rem;
-    margin-bottom: 4rem;
-    color: var(--color-secundario);
+    position: absolute;
+    top: 0;
+    color: var(--color-primario);
   }
 
-  .container h2,
-  .container h3 {
-    margin: 0;
-
+  .container h2 {
+    font-size: 2.4rem;
     font-weight: 600;
-    color: var(--color-secundario);
+    line-height: 1.1;
+    text-wrap: balance;
+    margin: 0 0 2rem;
+    position: relative;
   }
+
+  .butons-container {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+  }
+  .butons-container a {
+    width: 100%;
+    color: var(--color-texto);
+    padding: 0.7em 1.7em;
+    font-size: 1rem;
+    border-radius: 0.5em;
+    background: var(--color-fondo);
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid var(--color-fondo);
+    transition: all 0.3s;
+    box-shadow: var(--neumorphism-shadow);
+  }
+  .butons-container a:active {
+    box-shadow: var(--neumorphism-highlight);
+  }
+  .mail {
+    background-color: var(--color-quinto) !important;
+  }
+  @media (hover: hover) {
+    .butons-container a:hover {
+      color: var(--color-primario);
+      box-shadow: var(--neumorphism-highlight);
+    }
+
+  }
+  @media (max-width: 800px) {
+    .butons-container {
+      flex-direction: column;
+    }
 </style>
