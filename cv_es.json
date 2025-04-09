@@ -1,14 +1,14 @@
 {
   "basics": {
     "name": "Ramiro Fiscella",
-    "label1": "Fullstack Developer",
-    "label2": "UX/UI Designer",
+    "label1": "Desarrollador Fullstack",
+    "label2": "Diseñador UX/UI",
     "image": "/profile-2.jpg",
     "email": "ramirofiscella@gmail.com",
     "phone": "+54 2281 349346",
     "url": "https://ramirof.vercel.app",
-    "resume": "/RamiroFiscella_Resume_EN.pdf",
-    "summary": "I’m a UX/UI Designer and Fullstack Developer with experience in both collaborative agile teams and independent projects. I blend analytical thinking with creativity to craft functional, intuitive, and aesthetically refined digital products. My focus is on delivering high-quality, user-centered solutions while enjoying the process. When I'm not designing or coding, you’ll likely find me playing guitar, reading, or enjoying a great coffee, always exploring new ideas.",
+    "resume": "/RamiroFiscella_Resume_ES.pdf",
+    "summary": "Soy un Diseñador UX/UI y Desarrollador Fullstack con experiencia trabajando en equipos ágiles colaborativos y en proyectos independientes. Combino el pensamiento analítico con la creatividad para diseñar productos digitales funcionales, intuitivos y estéticamente refinados. Mi enfoque está en entregar soluciones de alta calidad centradas en el usuario mientras disfruto del proceso. Cuando no estoy diseñando o programando, probablemente me encuentres tocando guitarra, leyendo o disfrutando de un buen café, siempre explorando nuevas ideas.",
     "location": {
       "city": "Buenos Aires",
       "countryCode": "AR",
@@ -35,86 +35,86 @@
   "work": [
     {
       "name": "ConnectyFi",
-      "position": "UX/UI Designer",
+      "position": "Diseñador UX/UI",
       "url": "https://connectyfi.com/",
       "startDate": "01/2025",
-      "endDate": "Present",
-      "summary": "Designed the user interface and dashboard, considering UX/UI principles, and collaborated in development using JavaScript/Svelte and CSS."
+      "endDate": "Actualidad",
+      "summary": "Diseñé la interfaz de usuario y el panel de control, aplicando principios UX/UI, y colaboré en el desarrollo utilizando JavaScript/Svelte y CSS."
     },
     {
       "name": "Makisan Tech",
-      "position": "UX/UI Designer & Frontend Developer",
+      "position": "Diseñador UX/UI y Desarrollador Frontend",
       "url": "https://www.makisantech.com.ar/",
       "startDate": "10/2024",
       "endDate": "02/2025",
-      "summary": "Designed the user interface and dashboard, considering UX/UI principles, and collaborated in development using JavaScript/Svelte and CSS."
+      "summary": "Diseñé la interfaz de usuario y el panel de control, aplicando principios UX/UI, y colaboré en el desarrollo utilizando JavaScript/Svelte y CSS."
     },
     {
       "name": "CoopArSi",
-      "position": "Developer & Designer",
+      "position": "Desarrollador y Diseñador",
       "url": "https://cooparsi.com.ar/",
       "startDate": "12/2023",
       "endDate": "07/2024",
-      "summary": "Developed WordPress websites for a technology services cooperative."
+      "summary": "Desarrollé sitios web en WordPress para una cooperativa de servicios tecnológicos."
     },
     {
       "name": "Eclectic",
-      "position": "UX/UI Designer",
+      "position": "Diseñador UX/UI",
       "url": "https://www.behance.net/gallery/203048221/BUMBUM/modules/1152039929",
       "startDate": "02/2024",
       "endDate": "06/2024",
-      "summary": "Designed the brand identity, design system, and presentation slides. Also developed a high-fidelity interactive prototype for 'BUMBUM,' a mobile app for event and party discovery based on user location and preferences."
+      "summary": "Diseñé la identidad de marca, el sistema de diseño y las diapositivas de presentación. Además, desarrollé un prototipo interactivo de alta fidelidad para 'BUMBUM', una app móvil para descubrir eventos y fiestas basados en la ubicación y preferencias del usuario."
     },
     {
       "name": "Espacio Flipante",
-      "position": "Frontend Developer & UX/UI Designer",
+      "position": "Desarrollador Frontend y Diseñador UX/UI",
       "url": "https://espacio-flipante-pf.vercel.app/",
       "startDate": "08/2023",
       "endDate": "10/2023",
-      "summary": "Led the UX/UI design team. Designed the interface and prototyping in Figma. Developed and implemented features and components in React. (Currently, the backend is not operational)"
+      "summary": "Lideré el equipo de diseño UX/UI. Diseñé la interfaz y el prototipado en Figma. Desarrollé e implementé características y componentes en React. (Actualmente, el backend no está operativo)"
     }
   ],
   "education": [
     {
       "institution": "Agencia de Habilidades para el Futuro",
-      "area": "UX/UI Design",
-      "studyType": "Codo a Codo 4.0 Development Program - UX/UI Design.",
-      "duration": "198 hours",
+      "area": "Diseño UX/UI",
+      "studyType": "Programa de Desarrollo Codo a Codo 4.0 - Diseño UX/UI.",
+      "duration": "198 horas",
       "startDate": "02/2024",
       "endDate": "06/2024",
       "url": "https://drive.google.com/file/d/1eR3uAbUhdtYbvd00huJAu6tVeFzwTsC_/view?usp=sharing"
     },
     {
       "institution": "Soy Henry",
-      "area": "Fullstack Development",
-      "studyType": "Fullstack Web Development Bootcamp.",
-      "duration": "+800 hours",
+      "area": "Desarrollo Fullstack",
+      "studyType": "Bootcamp de Desarrollo Web Fullstack.",
+      "duration": "+800 horas",
       "startDate": "06/2023",
       "endDate": "10/2023",
       "url": "https://drive.google.com/file/d/140KqMxEGXF07deEG_poyZEUyu5HXYcto/view?usp=sharing"
     },
     {
       "institution": "INTI",
-      "area": "Web Development",
-      "studyType": "Web Development Bootcamp (#ArgentinaPrograma) by INTI (National Institute of Industrial Technology) under the Ministry of Economy of Argentina.",
-      "duration": "60 hours",
+      "area": "Desarrollo Web",
+      "studyType": "Bootcamp de Desarrollo Web (#ArgentinaPrograma) por INTI (Instituto Nacional de Tecnología Industrial) bajo el Ministerio de Economía de Argentina.",
+      "duration": "60 horas",
       "startDate": "05/2022",
       "endDate": "09/2022",
       "url": "https://drive.google.com/file/d/14-AnVtU5IymXD4MPjm4XY5UyKyTcQNL9/view?usp=sharing"
     },
     {
       "institution": "FreeCodeCamp",
-      "area": "Responsive Web Development",
-      "studyType": "Web Development Bootcamp by freeCodeCamp.",
-      "duration": "300 hours",
+      "area": "Desarrollo Web Responsive",
+      "studyType": "Bootcamp de Desarrollo Web por freeCodeCamp.",
+      "duration": "300 horas",
       "startDate": "02/2022",
       "endDate": "06/2022",
       "url": "https://www.freecodecamp.org/certification/kaliv/responsive-web-design"
     },
     {
       "institution": "UES21",
-      "area": "Engineering & Systems",
-      "studyType": "Bachelor’s Degree in Computer Science. Completed up to the third year.",
+      "area": "Ingeniería y Sistemas",
+      "studyType": "Licenciatura en Ciencias de la Computación. Estudios completados hasta el tercer año.",
       "duration": "-",
       "startDate": "03/2014",
       "endDate": "11/2017"
@@ -122,23 +122,23 @@
   ],
   "certificates": [
     {
-      "name": "English Certificate C2 Proficient (74/100)",
+      "name": "Certificado de Inglés C2 Proficiente (74/100)",
       "date": "02/08/2023",
       "issuer": "EFSET",
       "url": "https://cert.efset.org/9RQxJJ"
     }
   ],
   "designer": [
-    { "name": "User Research" },
+    { "name": "Investigación de Usuarios" },
     { "name": "Wireframing" },
-    { "name": "Prototyping" },
-    { "name": "Information Architecture" },
-    { "name": "Usability Testing" },
-    { "name": "Competitive Analisis" },
-    { "name": "Visual Design" },
-    { "name": "Microinteractions" },
+    { "name": "Prototipado" },
+    { "name": "Arquitectura de Información" },
+    { "name": "Pruebas de Usabilidad" },
+    { "name": "Análisis Competitivo" },
+    { "name": "Diseño Visual" },
+    { "name": "Microinteracciones" },
     { "name": "Branding" },
-    { "name": "Responsive Design" },
+    { "name": "Diseño Responsive" },
     { "name": "SEO" }
   ],
   "developer": [
@@ -152,22 +152,22 @@
     { "name": "Node.js" },
     { "name": "Express" },
     { "name": "PostgreSQL" },
-    { "name": "Restful API" },
+    { "name": "API Restful" },
     { "name": "Git" }
   ],
   "languages": [
     {
-      "language": "Spanish"
+      "language": "Español"
     },
     {
-      "language": "English"
+      "language": "Inglés"
     }
   ],
   "projects": [
     {
       "name": "Cleric Sheets",
       "isActive": true,
-      "description": "Web app for creating, editing, and storing character sheets for the Dungeons & Dragons role-playing game.",
+      "description": "Aplicación web para crear, editar y almacenar hojas de personaje para el juego de rol Dungeons & Dragons.",
       "tech": [
         "React",
         "TailwindCSS",
@@ -177,25 +177,29 @@
         "Auth0",
         "Cloudinary"
       ],
-      "roles": ["Product Designer", "Fullstack Developer", "Web App"],
+      "roles": [
+        "Diseñador de Producto",
+        "Desarrollador Fullstack",
+        "Aplicación Web"
+      ],
       "url": "https://hojascleric.vercel.app/",
       "image": "/images/cleric-sheets.png"
     },
     {
       "name": "BUMBUM",
       "isActive": true,
-      "description": "UX/UI research and design for a mobile party-finding app.",
+      "description": "Investigación y diseño UX/UI para una aplicación móvil destinada a encontrar fiestas.",
       "tech": ["Figma", "Slides", "Trello", "Notion", "Photoshop", "Whimsical"],
-      "roles": ["UX/UI Designer", "Prototyping", "Mobile App"],
+      "roles": ["Diseñador UX/UI", "Prototipado", "Aplicación Móvil"],
       "url": "https://www.behance.net/gallery/203048221/BUMBUM/modules/1152039929",
       "image": "/images/bumbum-app.png"
     },
     {
       "name": "Memoranda",
       "isActive": true,
-      "description": "A digital fanzine platform where users can share texts from friends, family, neighbors, or anyone interested.",
+      "description": "Plataforma digital estilo fanzine donde los usuarios pueden compartir textos de amigos, familiares, vecinos o cualquier persona interesada.",
       "tech": ["Next.js", "React", "Vercel", "CSS Modules"],
-      "roles": ["UX/UI Designer", "Content Curator"],
+      "roles": ["Diseñador UX/UI", "Curador de Contenido"],
       "url": "https://memoranda.vercel.app/",
       "image": "/images/memoranda.png"
     }
