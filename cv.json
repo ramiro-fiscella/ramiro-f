@@ -36,6 +36,14 @@
   },
   "work": [
     {
+      "name": "ConnectyFi",
+      "position": "UX/UI Designer",
+      "url": "https://connectyfi.com/",
+      "startDate": "01/2025",
+      "endDate": "Present",
+      "summary": "Designed the user interface and dashboard, considering UX/UI principles, and collaborated in development using JavaScript/Svelte and CSS."
+    },
+    {
       "name": "Makisan Tech",
       "position": "UX/UI Designer & Frontend Developer",
       "url": "https://www.makisantech.com.ar/",
