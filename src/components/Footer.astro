@@ -1,131 +1,118 @@
 ---
-// Frontmatter: aquí puedes importar datos y preparar variables, pero no usar APIs del navegador.
+// Importamos los 'basics' de tu CV
 import { basics } from '@cv';
 
-const { name, email, resume } = basics;
+// Obtenemos el nombre (para el copyright) y los perfiles (para los enlaces)
+const { name, profiles } = basics;
+
+// Obtenemos el año actual para el copyright
+const currentYear = new Date().getFullYear();
 ---
 
 <footer>
-  <div class="name-date">
-    <!-- Se muestra la fecha y hora en tiempo real, inicializada en el servidor pero que se actualizará en el cliente -->
-    <p id="clock">{new Date().toLocaleString()}</p>
-  </div>
+  <hr />
 
-  <div class="container">
-    <h2>
-      Open to new opportunities or side hustles, feel free to get in touch. ✌️
-    </h2>
-  </div>
-  <div class="butons-container">
+  <div class="footer-container">
+    <div class="copyright">
+      <p>&copy; {currentYear} {name}</p>
+    </div>
+
     {
-      email && (
-        <a
-          class="mail"
-          href={`mailto:${email}`}
-          title={`Enviar correo electrónico a ${name} al correo ${email}`}
-          target="_blank"
-          rel="noopener noreferer"
-        >
-          Contact
-        </a>
+      profiles && profiles.length > 0 && (
+        <nav class="social-links">
+          <ul>
+            {profiles.map(({ network, url }) => (
+              <li>
+                <a
+                  href={url}
+                  title={`Visitar ${name} en ${network}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {network}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
       )
     }
-    {
-      resume && (
-        <a
-          class="resume"
-          href={resume}
-          title={`Descargar CV de ${name}`}
-          target="_blank"
-          rel="noopener noreferer"
-        >
-          Resume
-        </a>
-      )
-    }
-    <a href="#" class="top" id="backToTop">Back to top</a>
   </div>
 </footer>
 
-<!-- Script que se ejecuta en el cliente, siguiendo el patrón de Astro Islands (como en la receta de Reading Time) -->
-<script>
-  function updateClock() {
-    const now = new Date();
-    const formatted = now.toLocaleString();
-    const clockEl = document.getElementById('clock');
-    if (clockEl) {
-      clockEl.innerText = formatted;
-    }
-  }
-  updateClock();
-  setInterval(updateClock, 1000);
-</script>
-
 <style>
-  html {
-    scroll-behavior: smooth;
-  }
+  /* CSS MINIMALISTA 
+    Eliminamos todo el CSS anterior (90vh, neumorfismo, etc.)
+  */
+
   footer {
-    position: relative;
-    padding: 4rem 1rem 4.6rem;
+    /* Usamos tus variables de color existentes */
     background: var(--color-fondo);
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    overflow: hidden;
-  }
-
-  .name-date p {
-    font-family: 'Space Grotesk', monospace;
-    text-transform: uppercase;
-    position: absolute;
-    top: 0;
-    color: var(--color-primario);
-  }
-
-  .container h2 {
-    font-size: 2.4rem;
-    font-weight: 600;
-    line-height: 1.1;
-    text-wrap: balance;
-    margin: 0 0 2rem;
-    position: relative;
-  }
-
-  .butons-container {
-    width: 100%;
-    display: flex;
-    gap: 1rem;
-  }
-  .butons-container a {
-    width: 100%;
     color: var(--color-texto);
-    padding: 0.7em 1.7em;
-    font-size: .8rem;
-    border-radius: 0.5em;
-    background: var(--color-fondo);
-    cursor: pointer;
-    text-align: center;
-    border: 1px solid var(--color-fondo);
-    transition: all 0.3s;
-    box-shadow: var(--neumorphism-shadow);
+    /* Un padding simple, mucho más pequeño que antes */
+    padding: 2.5rem 1.5rem;
+    width: 100%;
+    margin-top: 4rem; /* Un poco de espacio arriba */
   }
-  .butons-container a:active {
-    box-shadow: var(--neumorphism-highlight);
-  }
-  .mail {
-    background-color: var(--color-quinto) !important;
-  }
-  @media (hover: hover) {
-    .butons-container a:hover {
-      color: var(--color-primario);
-      box-shadow: var(--neumorphism-highlight);
-    }
 
+  hr {
+    /* Una línea sutil, como en la referencia */
+    border: none;
+    border-top: 1px solid var(--color-borde, #333); /* Usamos un color de borde si existe, si no, un gris */
+    opacity: 0.5;
+    margin-bottom: 2rem;
   }
-  @media (max-width: 800px) {
-    .butons-container {
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between; /* Copyright a la izq, links a la der */
+    align-items: center;
+    flex-wrap: wrap; /* Para que se apilen en móviles */
+    gap: 1.5rem; /* Espacio entre elementos si se apilan */
+
+    /* Centramos el contenido en un ancho máximo */
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .copyright p {
+    margin: 0; /* Quitamos margen por defecto */
+    font-size: 0.9rem;
+    color: var(
+      --color-texto-secundario,
+      var(--color-texto)
+    ); /* Color más sutil si lo tienes */
+    opacity: 0.8;
+  }
+
+  .social-links ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem; /* Espacio entre los enlaces */
+  }
+
+  .social-links a {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--color-texto);
+    opacity: 0.8;
+    transition:
+      color 0.3s ease,
+      opacity 0.3s ease;
+  }
+
+  .social-links a:hover {
+    color: var(--color-primario); /* Usamos tu color primario para el hover */
+    opacity: 1;
+  }
+
+  /* Media Query para móviles: apilamos los elementos */
+  @media (max-width: 640px) {
+    .footer-container {
       flex-direction: column;
+      align-items: flex-start; /* Alineamos todo a la izquierda */
     }
+  }
 </style>

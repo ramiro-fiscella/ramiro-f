@@ -1,6 +1,26 @@
 <button id="themeToggle">
-  <img class="sun" src="/dark-theme.png" alt="Icono de modo oscuro" />
-  <img class="moon" src="/light-theme.png" alt="Icono de modo claro" />
+  <svg
+    class="sun"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 480 480"
+    aria-label="Icono de modo oscuro"
+  >
+    <g fill="currentColor">
+      <circle cx="240" cy="240" r="240"></circle>
+    </g>
+  </svg>
+  <svg
+    class="moon"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 480 480"
+    aria-label="Icono de modo claro"
+  >
+    <g fill="currentColor">
+      <path
+        d="M240 0a240 240 0 1 0 0 480 240 240 0 0 0 0-480Zm0 360a120 120 0 1 1 0-240 120 120 0 0 1 0 240Z"
+      ></path>
+    </g>
+  </svg>
 </button>
 
 <style>
@@ -11,9 +31,16 @@
     border: none;
     background: none;
     cursor: pointer;
+    /* Añadimos 'color' para que los SVG con 'fill="currentColor"' 
+      hereden este color. Puedes cambiarlo por el que necesites.
+    */
+    color: #1427ff; /* Usando el color azul de tus SVGs originales */
   }
-  /* Ajuste de tamaño y transición */
-  #themeToggle img {
+
+  /* Ajuste de tamaño y transición 
+    Cambiamos 'img' por 'svg'
+  */
+  #themeToggle svg {
     width: 24px;
     height: 24px;
     transition:
@@ -21,13 +48,15 @@
       transform 0.3s ease,
       filter 0.3s ease;
   }
-  /* Por defecto (modo claro): se muestra la imagen 'sun' y se oculta 'moon' */
+
+  /* Por defecto (modo claro): se muestra 'sun' y se oculta 'moon' */
   #themeToggle .sun {
     display: block;
   }
   #themeToggle .moon {
     display: none;
   }
+
   /* En modo oscuro: se oculta 'sun' y se muestra 'moon' */
   html.dark #themeToggle .sun {
     display: none;
@@ -35,8 +64,11 @@
   html.dark #themeToggle .moon {
     display: block;
   }
-  /* Hover effect: agrega drop-shadow y aumenta la escala del icono */
-  #themeToggle:hover img {
+
+  /* Hover effect
+    Cambiamos 'img' por 'svg'
+  */
+  #themeToggle:hover svg {
     filter: drop-shadow(0 0 4px var(--color-primario));
   }
 </style>

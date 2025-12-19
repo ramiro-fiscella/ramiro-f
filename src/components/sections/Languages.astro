@@ -1,54 +1,17 @@
 ---
 import Section from '../Section.astro';
-
 import { languages } from '@cv';
 ---
 
 <Section>
   <h2>Languages</h2>
-  <ul>
+  <ul class="skill-list">
     {
-      languages.map(({ language }) => {
-        return (
-          <>
-            <li>
-              <span class="tag">{language}</span>
-            </li>
-          </>
-        );
-      })
+      languages.map(({ language }) => (
+        <li>
+          <span class="tag">{language}</span>
+        </li>
+      ))
     }
   </ul>
 </Section>
-
-<style>
-  h2 {
-    margin-bottom: 0.4rem;
-    font-size: 0.95rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: var(--color-terciario);
-  }
-  ul {
-    width: 100%;
-    display: inline-flex;
-    align-items: start;
-    justify-content: start;
-    flex-wrap: wrap;
-    color: var(--color-terciario);
-    gap: 0.6rem;
-    list-style: none;
-    padding: 0;
-    margin-bottom: 2rem;
-  }
-
-  @media (max-width: 768px) {
-    h2 {
-      text-align: left;
-    }
-    ul {
-      align-items: flex-start;
-      justify-content: flex-start;
-    }
-  }
-</style>

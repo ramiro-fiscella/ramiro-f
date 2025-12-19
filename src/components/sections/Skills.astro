@@ -1,0 +1,50 @@
+---
+import Section from '../Section.astro';
+import { designer, developer, languages } from '@cv';
+---
+
+<div>
+  <ul class="skill-list">
+    {
+      designer.map(({ name }) => (
+        <li>
+          <span class="tag">{name}</span>
+        </li>
+      ))
+    }
+    {
+      developer.map(({ name }) => (
+        <li>
+          <span class="tag">{name}</span>
+        </li>
+      ))
+    }
+
+    {
+      languages.map(({ language }) => (
+        <li>
+          <span class="tag">{language}</span>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<style>
+  div {
+    width: 50%;
+  }
+  .skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem; 
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+  }
+
+   @media (max-width: 768px) {
+    div {
+      width: 100%;
+    }
+</style>

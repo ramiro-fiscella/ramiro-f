@@ -4,7 +4,6 @@ import { projects } from '@cv';
 ---
 
 <Section>
-  <h2 class="subtitle">Projects</h2>
   <ul class="projects">
     {projects.map(({ name, description, roles, url, image }) => (
       <li class="project">
@@ -39,6 +38,7 @@ import { projects } from '@cv';
 </Section>
 
 <style>
+
   /* Contenedor de proyectos */
   h2.subtitle {
     margin-top: 0;
@@ -76,7 +76,6 @@ import { projects } from '@cv';
     padding: 0.5rem 1rem;
     box-sizing: border-box;
     color: #fff;
-    font-size: 1.1rem;
   }
   
   /* Imagen de fondo */
@@ -102,7 +101,6 @@ import { projects } from '@cv';
   .overlay-title h3 {
     margin: 0;
     color: #fff;
-    font-size: 1.1rem;
   }
 
   /* Capa hover: Overlay glassmorphism */
@@ -135,7 +133,6 @@ import { projects } from '@cv';
 
   /* Estilos dentro de la capa hover */
   .data p {
-    font-size: 0.85rem;
     opacity: 0.9;
     line-height: 1.2;
     margin: 0;
